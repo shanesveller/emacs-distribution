@@ -1,0 +1,38 @@
+#+STARTUP: content
+#+STARTUP: nohideblocks
+#+STARTUP: noindent
+#+OPTIONS: toc:4 h:4
+#+PROPERTY: header-args:emacs-lisp :comments link
+
+* References
+** Package Management
+*** Straight.el
+    - https://github.com/raxod502/straight.el
+*** Use-package
+    - https://github.com/jwiegley/use-package
+* Bootstrap
+** Emacs Home Directory
+   #+BEGIN_SRC emacs-lisp :tangle init.el
+     (setq user-init-file (or load-file-name (buffer-file-name)))
+     (setq user-emacs-directory (file-name-directory user-init-file))
+   #+END_SRC
+** Straight.el
+   #+BEGIN_SRC emacs-lisp :tangle init.el
+     (setq straight-repository-branch "develop")
+     (defvar bootstrap-version)
+     (let ((bootstrap-file
+            (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+           (bootstrap-version 5))
+       (unless (file-exists-p bootstrap-file)
+         (with-current-buffer
+             (url-retrieve-synchronously
+              "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+              'silent 'inhibit-cookies)
+           (goto-char (point-max))
+           (eval-print-last-sexp)))
+       (load bootstrap-file nil 'nomessage))
+   #+END_SRC
+** Use-package
+   #+BEGIN_SRC emacs-lisp :tangle init.el
+     (straight-use-package 'use-package)
+   #+END_SRC
