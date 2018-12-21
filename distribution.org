@@ -53,6 +53,13 @@
            create-lockfiles nil
            make-backup-files nil)
    #+END_SRC
+** Startup Performance
+   References:
+   - https://github.com/jschaf/esup
+   - https://oremacs.com/2015/02/24/emacs-speed-test/
+   #+BEGIN_SRC emacs-lisp :tangle init.el
+     (straight-use-package 'esup)
+   #+END_SRC
 * Features
 ** TODO Evil-Mode
    References:
