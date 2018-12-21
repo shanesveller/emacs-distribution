@@ -36,3 +36,11 @@
    #+BEGIN_SRC emacs-lisp :tangle init.el
      (straight-use-package 'use-package)
    #+END_SRC
+* Features
+** TODO Evil-Mode
+   References:
+   - https://github.com/emacs-evil/evil
+   - https://www.emacswiki.org/emacs/Evil
+   #+BEGIN_SRC emacs-lisp :tangle init.el
+     (straight-use-package 'evil)
+   #+END_SRC
