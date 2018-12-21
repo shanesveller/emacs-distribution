@@ -57,6 +57,14 @@
    #+BEGIN_SRC emacs-lisp :tangle init.el
      (straight-use-package 'magit)
    #+END_SRC
+*** TODO Forge
+    References:
+    - https://emacsair.me/2018/12/19/forge-0.1/
+    - https://github.com/magit/forge
+    - https://magit.vc/manual/forge/
+    #+BEGIN_SRC emacs-lisp :tangle init.el
+      (straight-use-package 'forge)
+    #+END_SRC
 ** TODO Org-Mode
    References:
    - https://orgmode.org/
