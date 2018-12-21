@@ -12,3 +12,7 @@ install-packages:
 .PHONY: run
 run: init.el
 	emacs -Q -l init.el -nw
+
+.PHONY: self-edit
+self-edit:
+	emacs -Q -l init.el -nw distribution.org
