@@ -49,6 +49,14 @@
    #+BEGIN_SRC emacs-lisp :tangle init.el
      (straight-use-package 'evil)
    #+END_SRC
+** TODO Magit
+   References:
+   - https://github.com/magit/magit
+   - https://magit.vc/
+   - https://magit.vc/manual/magit/Installation.html
+   #+BEGIN_SRC emacs-lisp :tangle init.el
+     (straight-use-package 'magit)
+   #+END_SRC
 ** TODO Org-Mode
    References:
    - https://orgmode.org/
