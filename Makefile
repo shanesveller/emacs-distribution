@@ -8,3 +8,7 @@ freeze-packages:
 .PHONY: install-packages
 install-packages:
 	emacs -Q -l init.el --batch
+
+.PHONY: run
+run: init.el
+	emacs -Q -l init.el -nw
