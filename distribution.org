@@ -5,6 +5,11 @@
 #+PROPERTY: header-args:emacs-lisp :comments link
 
 * References
+** Emacs
+   - http://sachachua.com/blog/category/geek/emacs/
+   - http://sachachua.com/blog/category/geek/emacs/emacs-news/
+   - https://www.emacswiki.org/
+   - https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
 ** Package Management
 *** Straight.el
     - https://github.com/raxod502/straight.el
