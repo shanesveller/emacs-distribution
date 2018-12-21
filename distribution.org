@@ -41,6 +41,16 @@
    #+BEGIN_SRC emacs-lisp :tangle init.el
      (straight-use-package 'use-package)
    #+END_SRC
+* Behavior
+** Inhibit File Backups
+   References:
+   - http://ergoemacs.org/emacs/emacs_set_backup_into_a_directory.html
+   - https://www.gnu.org/software/emacs/manual/html_node/emacs/Backup.html#Backup
+   #+BEGIN_SRC emacs-lisp :tangle init.el
+     (setq auto-save-default nil
+           create-lockfiles nil
+           make-backup-files nil)
+   #+END_SRC
 * Features
 ** TODO Evil-Mode
    References:
