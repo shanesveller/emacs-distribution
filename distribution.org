@@ -43,6 +43,15 @@
    #+BEGIN_SRC emacs-lisp :tangle init.el
      (straight-use-package 'use-package)
    #+END_SRC
+* Configuration
+** Personal Information
+   References:
+   - https://www.gnu.org/software/emacs/manual/html_node/elisp/User-Identification.html
+   - http://pages.sachachua.com/.emacs.d/Sacha.html#org21ba8a0
+   #+BEGIN_SRC emacs-lisp :tangle init.el
+     (setq user-full-name "Shane Sveller"
+           user-mail-address "shane@shanesveller.com")
+   #+END_SRC
 * Behavior
 ** Inhibit File Backups
    References:
