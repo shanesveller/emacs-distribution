@@ -95,3 +95,12 @@
       '(org :type git :host github :repo "emacsmirror/org" :no-build t))
      (straight-use-package 'org-plus-contrib)
    #+END_SRC
+* Aesthetics
+** Themes
+   References:
+   - https://github.com/belak/base16-emacs
+   #+BEGIN_SRC emacs-lisp :tangle init.el
+     (straight-use-package 'base16-theme
+       :config
+       (load-theme 'base16-default-dark t))
+   #+END_SRC
