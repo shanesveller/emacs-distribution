@@ -10,6 +10,15 @@
    - http://sachachua.com/blog/category/geek/emacs/emacs-news/
    - https://www.emacswiki.org/
    - https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
+*** Notable Users
+    - https://github.com/Fuco1
+    - https://github.com/Malabarba
+    - https://github.com/TheBB
+    - https://github.com/abo-abo
+    - https://github.com/alphapapa
+    - https://github.com/bbatsov
+    - https://github.com/jwiegley
+    - https://github.com/mickeynp
 ** Package Management
 *** Straight.el
     - https://github.com/raxod502/straight.el
