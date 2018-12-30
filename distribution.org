@@ -149,5 +149,6 @@
    #+BEGIN_SRC emacs-lisp :tangle init.el
      (straight-use-package
        '(unpackaged :type git :host github :repo "alphapapa/unpackaged.el"))
+     (require 'unpackaged)
    #+END_SRC
 * New Content
