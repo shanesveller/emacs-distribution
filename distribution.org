@@ -218,6 +218,16 @@
        '(unpackaged :type git :host github :repo "alphapapa/unpackaged.el"))
      (require 'unpackaged)
    #+END_SRC
+** TODO Avy
+   [2018-12-30 Sun 15:26]
+   References:
+   - https://github.com/abo-abo/avy
+   #+BEGIN_SRC emacs-lisp
+     (use-package avy
+       :config (progn
+                 (avy-setup-default)
+                 (global-set-key (kbd "C-c C-j") 'avy-resume)))
+   #+END_SRC
 * Cleanup
   :PROPERTIES:
   :header-args: :tangle init.el
