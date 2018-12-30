@@ -9,6 +9,10 @@ freeze-packages: init.el
 install-packages: init.el
 	emacs -Q -l init.el --batch
 
+.PHONY: profile
+profile: init.el
+	emacs -Q -l init.el -nw --eval "(esup)"
+
 .PHONY: run
 run: init.el
 	emacs -Q -l init.el -nw
