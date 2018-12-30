@@ -291,6 +291,23 @@
                  (doom-themes-visual-bell-config)
                  (with-eval-after-load 'org (doom-themes-org-config))))
    #+END_SRC
+** TODO Minion/Moody
+   [2018-12-30 Sun 15:38]
+   References:
+   - https://diego.codes/post/emacs-2018/
+   - http://manuel-uberti.github.io/emacs/2018/03/10/moody-and-minions/
+   - https://github.com/tarsius/minions
+   - https://github.com/tarsius/moody
+   #+BEGIN_SRC emacs-lisp
+     (use-package moody
+       :config
+       (setq x-underline-at-descent-line t)
+       (moody-replace-mode-line-buffer-identification)
+       (moody-replace-vc-mode))
+
+     (use-package minions
+       :config (minions-mode 1))
+   #+END_SRC
 * Cleanup
   :PROPERTIES:
   :header-args: :tangle init.el
