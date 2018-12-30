@@ -42,6 +42,7 @@
 ** Use-package
    #+BEGIN_SRC emacs-lisp :tangle init.el
      (straight-use-package 'use-package)
+     (setq straight-use-package-by-default t)
    #+END_SRC
 * Configuration
 ** Personal Information
@@ -85,7 +86,7 @@
    - https://github.com/jschaf/esup
    - https://oremacs.com/2015/02/24/emacs-speed-test/
    #+BEGIN_SRC emacs-lisp :tangle init.el
-     (straight-use-package 'esup)
+     (use-package esup)
    #+END_SRC
 * Features
 ** TODO Evil-Mode
@@ -93,14 +94,14 @@
    - https://github.com/emacs-evil/evil
    - https://www.emacswiki.org/emacs/Evil
    #+BEGIN_SRC emacs-lisp :tangle init.el
-     (straight-use-package 'evil)
+     (use-package evil)
      (evil-mode 1)
    #+END_SRC
 ** TODO Which-key
    References:
    - https://github.com/justbur/emacs-which-key
    #+BEGIN_SRC emacs-lisp :tangle init.el
-     (straight-use-package 'which-key)
+     (use-package which-key)
      (which-key-mode 1)
    #+END_SRC
 ** TODO Magit
@@ -109,7 +110,7 @@
    - https://magit.vc/
    - https://magit.vc/manual/magit/Installation.html
    #+BEGIN_SRC emacs-lisp :tangle init.el
-     (straight-use-package 'magit)
+     (use-package magit)
    #+END_SRC
 *** TODO Forge
     References:
@@ -117,7 +118,7 @@
     - https://github.com/magit/forge
     - https://magit.vc/manual/forge/
     #+BEGIN_SRC emacs-lisp :tangle init.el
-      (straight-use-package 'forge)
+      (use-package forge)
     #+END_SRC
 ** TODO Org-Mode
    References:
