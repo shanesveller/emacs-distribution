@@ -35,6 +35,18 @@
      (setq user-init-file (or load-file-name (buffer-file-name))
            user-emacs-directory (file-name-directory user-init-file))
    #+END_SRC
+** Garbage Collection
+   References:
+   - https://github.com/hlissner/doom-emacs/issues/310#issuecomment-354424413
+   - http://bling.github.io/blog/2016/01/18/why-are-you-changing-gc-cons-threshold/
+   - https://www.gnu.org/software/emacs/manual/html_node/elisp/Standard-Hooks.html
+   - https://batsov.com/articles/2012/10/20/emacs-tip-number-6-remove-variable-and-function-definitions/
+   #+BEGIN_SRC emacs-lisp
+     (defvar last-file-name-handler-alist file-name-handler-alist)
+     (setq file-name-handler-alist nil
+           gc-cons-percentage 0.9
+           gc-cons-threshold most-positive-fixnum)
+   #+END_SRC
 ** Straight.el
    #+BEGIN_SRC emacs-lisp
      (setq straight-repository-branch "develop")
@@ -197,6 +209,25 @@
      (straight-use-package
        '(unpackaged :type git :host github :repo "alphapapa/unpackaged.el"))
      (require 'unpackaged)
+   #+END_SRC
+* Cleanup
+  :PROPERTIES:
+  :header-args: :tangle init.el
+  :END:
+** Garbage Collection
+   References:
+   - https://github.com/hlissner/doom-emacs/issues/310#issuecomment-354424413
+   - http://bling.github.io/blog/2016/01/18/why-are-you-changing-gc-cons-threshold/
+   - https://www.gnu.org/software/emacs/manual/html_node/elisp/Standard-Hooks.html
+   - https://batsov.com/articles/2012/10/20/emacs-tip-number-6-remove-variable-and-function-definitions/
+   #+BEGIN_SRC emacs-lisp
+     (defun my/after-emacs-startup-gc ()
+       (setq file-name-handler-alist last-file-name-handler-alist
+             gc-cons-percentage 0.1
+             gc-cons-threshold 800000)
+       (makunbound 'last-file-name-handler-alist)
+       (fmakunbound 'my/after-emacs-startup-gc))
+     (add-hook 'emacs-startup-hook 'my/after-emacs-startup-gc)
    #+END_SRC
 * New Content
   :PROPERTIES:
