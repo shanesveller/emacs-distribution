@@ -179,6 +179,14 @@
                (file+headline (lambda () (concat user-emacs-directory "distribution.org")) "New Content")
                "** TODO \n   %U\n   References:\n   - \n   #+BEGIN_SRC emacs-lisp\n   #+END_SRC")))
     #+END_SRC
+** TODO Projectile
+   [2018-12-30 Sun 14:15]
+   References:
+   - https://github.com/bbatsov/projectile
+   - https://docs.projectile.mx
+   #+BEGIN_SRC emacs-lisp
+     (use-package projectile)
+   #+END_SRC
 ** TODO Unpackaged
    :PROPERTIES:
    :header-args: :tangle no
