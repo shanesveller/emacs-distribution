@@ -23,6 +23,8 @@
     - https://github.com/bbatsov
     - https://github.com/jwiegley
     - https://github.com/mickeynp
+*** Blog Posts
+    - https://diego.codes/post/emacs-2018/
 ** Package Management
 *** Straight.el
     - https://github.com/raxod502/straight.el
