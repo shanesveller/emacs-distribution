@@ -25,15 +25,18 @@
 *** Use-package
     - https://github.com/jwiegley/use-package
 * Bootstrap
+  :PROPERTIES:
+  :header-args: :tangle init.el
+  :END:
 ** Emacs Home Directory
    References:
    - https://emacs.stackexchange.com/questions/4253/how-to-start-emacs-with-a-custom-user-emacs-directory
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (setq user-init-file (or load-file-name (buffer-file-name))
            user-emacs-directory (file-name-directory user-init-file))
    #+END_SRC
 ** Straight.el
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (setq straight-repository-branch "develop")
      (defvar bootstrap-version)
      (let ((bootstrap-file
@@ -49,24 +52,30 @@
        (load bootstrap-file nil 'nomessage))
    #+END_SRC
 ** Use-package
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (straight-use-package 'use-package)
      (setq straight-use-package-by-default t)
    #+END_SRC
 * Configuration
+  :PROPERTIES:
+  :header-args: :tangle init.el
+  :END:
 ** Personal Information
    References:
    - https://www.gnu.org/software/emacs/manual/html_node/elisp/User-Identification.html
    - http://pages.sachachua.com/.emacs.d/Sacha.html#org21ba8a0
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (setq user-full-name "Shane Sveller"
            user-mail-address "shane@shanesveller.com")
    #+END_SRC
 * Behavior
+  :PROPERTIES:
+  :header-args: :tangle init.el
+  :END:
 ** Self-Reload
    References:
    - https://orgmode.org/worg/org-contrib/babel/intro.html#emacs-initialization
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (defvar my/config-file
        (concat user-emacs-directory "distribution.org")
        "Location of root .org file governing this Emacs installation.")
@@ -85,7 +94,7 @@
    References:
    - http://ergoemacs.org/emacs/emacs_set_backup_into_a_directory.html
    - https://www.gnu.org/software/emacs/manual/html_node/emacs/Backup.html#Backup
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (setq auto-save-default nil
            create-lockfiles nil
            make-backup-files nil)
@@ -94,22 +103,25 @@
    References:
    - https://github.com/jschaf/esup
    - https://oremacs.com/2015/02/24/emacs-speed-test/
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (use-package esup)
    #+END_SRC
 * Features
+   :PROPERTIES:
+   :header-args: :tangle init.el
+   :END:
 ** TODO Evil-Mode
    References:
    - https://github.com/emacs-evil/evil
    - https://www.emacswiki.org/emacs/Evil
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (use-package evil)
      (evil-mode 1)
    #+END_SRC
 ** TODO Which-key
    References:
    - https://github.com/justbur/emacs-which-key
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (use-package which-key)
      (which-key-mode 1)
    #+END_SRC
@@ -133,7 +145,7 @@
    - https://github.com/magit/magit
    - https://magit.vc/
    - https://magit.vc/manual/magit/Installation.html
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (use-package magit)
    #+END_SRC
 *** TODO Forge
@@ -141,7 +153,7 @@
     - https://emacsair.me/2018/12/19/forge-0.1/
     - https://github.com/magit/forge
     - https://magit.vc/manual/forge/
-    #+BEGIN_SRC emacs-lisp :tangle init.el
+    #+BEGIN_SRC emacs-lisp
       (use-package forge)
     #+END_SRC
 ** TODO Org-Mode
@@ -149,7 +161,7 @@
    - https://orgmode.org/
    - https://github.com/emacsmirror/org
    - https://github.com/raxod502/straight.el/issues/211#issuecomment-355379837
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (straight-use-package 'org-plus-contrib)
    #+END_SRC
 *** TODO Org-Capture
@@ -161,18 +173,21 @@
     - https://orgmode.org/manual/Templates-in-contexts.html#Templates-in-contexts
     - https://emacs.stackexchange.com/a/42140
     - https://www.reddit.com/r/emacs/comments/7zqc7b/share_your_org_capture_templates/
-    #+BEGIN_SRC emacs-lisp :tangle init.el
+    #+BEGIN_SRC emacs-lisp
       (setq org-capture-templates
             '(("d" "Distribution" entry
                (file+headline (lambda () (concat user-emacs-directory "distribution.org")) "New Content")
-               "** TODO \n   %U\n   References:\n   - \n   #+BEGIN_SRC emacs-lisp :tangle init.el\n   #+END_SRC")))
+               "** TODO \n   %U\n   References:\n   - \n   #+BEGIN_SRC emacs-lisp\n   #+END_SRC")))
     #+END_SRC
 ** TODO Unpackaged
    References:
    - https://github.com/alphapapa/unpackaged.el
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (straight-use-package
        '(unpackaged :type git :host github :repo "alphapapa/unpackaged.el"))
      (require 'unpackaged)
    #+END_SRC
 * New Content
+  :PROPERTIES:
+  :header-args: :tangle no
+  :END:
