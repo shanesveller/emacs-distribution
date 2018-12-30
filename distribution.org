@@ -94,6 +94,7 @@
    - https://www.emacswiki.org/emacs/Evil
    #+BEGIN_SRC emacs-lisp :tangle init.el
      (straight-use-package 'evil)
+     (evil-mode 1)
    #+END_SRC
 ** TODO Magit
    References:
