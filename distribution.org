@@ -104,6 +104,21 @@
      (use-package which-key)
      (which-key-mode 1)
    #+END_SRC
+** TODO Hydra
+   [2018-12-30 Sun 13:28]
+   References:
+   - https://github.com/abo-abo/hydra
+   - https://github.com/abo-abo/hydra/wiki/straight.el
+   #+BEGIN_SRC emacs-lisp
+     (use-package hydra
+       :defer t
+       :config (defhydra hydra-distribution
+                 (global-map "<f5>" :exit t)
+                 "distribution"
+                 ("c" org-capture "capture")
+                 ("e" my/edit-config "edit config")
+                 ("r" my/reload-config "reload config")))
+   #+END_SRC
 ** TODO Magit
    References:
    - https://github.com/magit/magit
