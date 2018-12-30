@@ -125,9 +125,6 @@
    - https://github.com/emacsmirror/org
    - https://github.com/raxod502/straight.el/issues/211#issuecomment-355379837
    #+BEGIN_SRC emacs-lisp :tangle init.el
-     ;; (straight-use-package 'org)
-     (straight-override-recipe
-      '(org :type git :host github :repo "emacsmirror/org" :no-build t))
      (straight-use-package 'org-plus-contrib)
    #+END_SRC
 ** TODO Unpackaged
