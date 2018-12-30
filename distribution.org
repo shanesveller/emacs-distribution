@@ -127,6 +127,21 @@
    #+BEGIN_SRC emacs-lisp :tangle init.el
      (straight-use-package 'org-plus-contrib)
    #+END_SRC
+*** TODO Org-Capture
+    References:
+    - https://orgmode.org/manual/Easy-templates.html
+    - https://orgmode.org/manual/Capture-templates.html
+    - https://www.gnu.org/software/emacs/manual/html_node/org/Template-elements.html
+    - https://orgmode.org/manual/Template-expansion.html#Template-expansion
+    - https://orgmode.org/manual/Templates-in-contexts.html#Templates-in-contexts
+    - https://emacs.stackexchange.com/a/42140
+    - https://www.reddit.com/r/emacs/comments/7zqc7b/share_your_org_capture_templates/
+    #+BEGIN_SRC emacs-lisp :tangle init.el
+      (setq org-capture-templates
+            '(("d" "Distribution" entry
+               (file+headline (lambda () (concat user-emacs-directory "distribution.org")) "New Content")
+               "** TODO \n   %U\n   References:\n   - \n   #+BEGIN_SRC emacs-lisp :tangle init.el\n   #+END_SRC")))
+    #+END_SRC
 ** TODO Unpackaged
    References:
    - https://github.com/alphapapa/unpackaged.el
@@ -134,3 +149,4 @@
      (straight-use-package
        '(unpackaged :type git :host github :repo "alphapapa/unpackaged.el"))
    #+END_SRC
+* New Content
