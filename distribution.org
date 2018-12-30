@@ -180,6 +180,9 @@
                "** TODO \n   %U\n   References:\n   - \n   #+BEGIN_SRC emacs-lisp\n   #+END_SRC")))
     #+END_SRC
 ** TODO Unpackaged
+   :PROPERTIES:
+   :header-args: :tangle no
+   :END:
    References:
    - https://github.com/alphapapa/unpackaged.el
    #+BEGIN_SRC emacs-lisp
