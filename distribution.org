@@ -174,7 +174,8 @@
     - https://github.com/magit/forge
     - https://magit.vc/manual/forge/
     #+BEGIN_SRC emacs-lisp
-      (use-package forge)
+      (use-package forge
+        :after magit)
     #+END_SRC
 ** TODO Org-Mode
    References:
