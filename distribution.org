@@ -10,6 +10,10 @@
    - http://sachachua.com/blog/category/geek/emacs/emacs-news/
    - https://www.emacswiki.org/
    - https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
+*** Emacs Lisp
+**** Setq vs Defvar
+     References:
+     - https://emacs.stackexchange.com/questions/29710/whats-the-difference-between-setq-and-defvar
 *** Notable Users
     - https://github.com/Fuco1
     - https://github.com/Malabarba
