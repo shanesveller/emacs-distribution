@@ -170,10 +170,13 @@
    - https://magit.vc/
    - https://magit.vc/manual/magit/Installation.html
    - https://github.com/emacs-evil/evil-magit
+   - https://github.com/alphapapa/magit-todos
    #+BEGIN_SRC emacs-lisp
      (use-package magit
        :defer t)
      (use-package evil-magit
+       :after magit)
+     (use-package magit-todos
        :after magit)
    #+END_SRC
 *** TODO Forge
