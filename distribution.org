@@ -53,6 +53,24 @@
            user-mail-address "shane@shanesveller.com")
    #+END_SRC
 * Behavior
+** Self-Reload
+   References:
+   - https://orgmode.org/worg/org-contrib/babel/intro.html#emacs-initialization
+   #+BEGIN_SRC emacs-lisp :tangle init.el
+     (defvar my/config-file
+       (concat user-emacs-directory "distribution.org")
+       "Location of root .org file governing this Emacs installation.")
+     (defun my/edit-config ()
+       "Visit .org configuration file via find-file"
+       (interactive)
+       (find-file my/config-file))
+     (defun my/reload-config ()
+       "Automatically reloads configuration via org-babel-load-file"
+       (interactive)
+       (progn
+         (org-babel-tangle-file my/config-file)
+         (load-file user-init-file)))
+   #+END_SRC
 ** Inhibit File Backups
    References:
    - http://ergoemacs.org/emacs/emacs_set_backup_into_a_directory.html
