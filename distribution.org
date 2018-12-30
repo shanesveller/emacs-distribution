@@ -137,6 +137,14 @@
      (use-package which-key)
      (which-key-mode 1)
    #+END_SRC
+** TODO Counsel/Ivy/Swiper
+   [2018-12-30 Sun 14:47]
+   References:
+   - https://github.com/abo-abo/swiper
+   #+BEGIN_SRC emacs-lisp
+     (use-package ivy
+       :config (ivy-mode 1))
+   #+END_SRC
 ** TODO Hydra
    [2018-12-30 Sun 13:28]
    References:
