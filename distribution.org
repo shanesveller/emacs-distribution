@@ -10,21 +10,51 @@
    - http://sachachua.com/blog/category/geek/emacs/emacs-news/
    - https://www.emacswiki.org/
    - https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
+*** Emacs Lisp
+**** Setq vs Defvar
+     References:
+     - https://emacs.stackexchange.com/questions/29710/whats-the-difference-between-setq-and-defvar
+*** Notable Users
+    - https://github.com/Fuco1
+    - https://github.com/Malabarba
+    - https://github.com/TheBB
+    - https://github.com/abo-abo
+    - https://github.com/alphapapa
+    - https://github.com/bbatsov
+    - https://github.com/jwiegley
+    - https://github.com/mickeynp
+*** Blog Posts
+    - https://diego.codes/post/emacs-2018/
 ** Package Management
 *** Straight.el
     - https://github.com/raxod502/straight.el
 *** Use-package
     - https://github.com/jwiegley/use-package
 * Bootstrap
+  :PROPERTIES:
+  :header-args: :tangle init.el
+  :END:
 ** Emacs Home Directory
    References:
    - https://emacs.stackexchange.com/questions/4253/how-to-start-emacs-with-a-custom-user-emacs-directory
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (setq user-init-file (or load-file-name (buffer-file-name))
            user-emacs-directory (file-name-directory user-init-file))
    #+END_SRC
+** Garbage Collection
+   References:
+   - https://github.com/hlissner/doom-emacs/issues/310#issuecomment-354424413
+   - http://bling.github.io/blog/2016/01/18/why-are-you-changing-gc-cons-threshold/
+   - https://www.gnu.org/software/emacs/manual/html_node/elisp/Standard-Hooks.html
+   - https://batsov.com/articles/2012/10/20/emacs-tip-number-6-remove-variable-and-function-definitions/
+   #+BEGIN_SRC emacs-lisp
+     (defvar last-file-name-handler-alist file-name-handler-alist)
+     (setq file-name-handler-alist nil
+           gc-cons-percentage 0.9
+           gc-cons-threshold most-positive-fixnum)
+   #+END_SRC
 ** Straight.el
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (setq straight-repository-branch "develop")
      (defvar bootstrap-version)
      (let ((bootstrap-file
@@ -40,15 +70,49 @@
        (load bootstrap-file nil 'nomessage))
    #+END_SRC
 ** Use-package
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (straight-use-package 'use-package)
+     (setq straight-use-package-by-default t)
+   #+END_SRC
+* Configuration
+  :PROPERTIES:
+  :header-args: :tangle init.el
+  :END:
+** Personal Information
+   References:
+   - https://www.gnu.org/software/emacs/manual/html_node/elisp/User-Identification.html
+   - http://pages.sachachua.com/.emacs.d/Sacha.html#org21ba8a0
+   #+BEGIN_SRC emacs-lisp
+     (setq user-full-name "Shane Sveller"
+           user-mail-address "shane@shanesveller.com")
    #+END_SRC
 * Behavior
+  :PROPERTIES:
+  :header-args: :tangle init.el
+  :END:
+** Self-Reload
+   References:
+   - https://orgmode.org/worg/org-contrib/babel/intro.html#emacs-initialization
+   #+BEGIN_SRC emacs-lisp
+     (defvar my/config-file
+       (concat user-emacs-directory "distribution.org")
+       "Location of root .org file governing this Emacs installation.")
+     (defun my/edit-config ()
+       "Visit .org configuration file via find-file"
+       (interactive)
+       (find-file my/config-file))
+     (defun my/reload-config ()
+       "Automatically reloads configuration via org-babel-load-file"
+       (interactive)
+       (progn
+         (org-babel-tangle-file my/config-file)
+         (load-file user-init-file)))
+   #+END_SRC
 ** Inhibit File Backups
    References:
    - http://ergoemacs.org/emacs/emacs_set_backup_into_a_directory.html
    - https://www.gnu.org/software/emacs/manual/html_node/emacs/Backup.html#Backup
-   #+BEGIN_SRC emacs-lisp :tangle init.el
+   #+BEGIN_SRC emacs-lisp
      (setq auto-save-default nil
            create-lockfiles nil
            make-backup-files nil)
@@ -57,41 +121,213 @@
    References:
    - https://github.com/jschaf/esup
    - https://oremacs.com/2015/02/24/emacs-speed-test/
-   #+BEGIN_SRC emacs-lisp :tangle init.el
-     (straight-use-package 'esup)
+   #+BEGIN_SRC emacs-lisp
+     (use-package esup)
    #+END_SRC
 * Features
+   :PROPERTIES:
+   :header-args: :tangle init.el
+   :END:
 ** TODO Evil-Mode
    References:
    - https://github.com/emacs-evil/evil
    - https://www.emacswiki.org/emacs/Evil
-   #+BEGIN_SRC emacs-lisp :tangle init.el
-     (straight-use-package 'evil)
+   #+BEGIN_SRC emacs-lisp
+     (use-package evil)
+     (evil-mode 1)
+   #+END_SRC
+** TODO Which-key
+   References:
+   - https://github.com/justbur/emacs-which-key
+   #+BEGIN_SRC emacs-lisp
+     (use-package which-key)
+     (which-key-mode 1)
+   #+END_SRC
+** TODO Counsel/Ivy/Swiper
+   [2018-12-30 Sun 14:47]
+   References:
+   - https://github.com/abo-abo/swiper
+   #+BEGIN_SRC emacs-lisp
+     (use-package ivy
+       :config (ivy-mode 1))
+   #+END_SRC
+** TODO Hydra
+   [2018-12-30 Sun 13:28]
+   References:
+   - https://github.com/abo-abo/hydra
+   - https://github.com/abo-abo/hydra/wiki/straight.el
+   #+BEGIN_SRC emacs-lisp
+     (use-package hydra
+       :defer t
+       :config (defhydra hydra-distribution
+                 (global-map "<f5>" :exit t)
+                 "distribution"
+                 ("c" org-capture "capture")
+                 ("e" my/edit-config "edit config")
+                 ("r" my/reload-config "reload config")))
    #+END_SRC
 ** TODO Magit
    References:
    - https://github.com/magit/magit
    - https://magit.vc/
    - https://magit.vc/manual/magit/Installation.html
-   #+BEGIN_SRC emacs-lisp :tangle init.el
-     (straight-use-package 'magit)
+   - https://github.com/emacs-evil/evil-magit
+   - https://github.com/alphapapa/magit-todos
+   #+BEGIN_SRC emacs-lisp
+     (use-package magit
+       :defer t)
+     (use-package evil-magit
+       :after magit)
+     (use-package magit-todos
+       :after magit)
    #+END_SRC
 *** TODO Forge
     References:
     - https://emacsair.me/2018/12/19/forge-0.1/
     - https://github.com/magit/forge
     - https://magit.vc/manual/forge/
-    #+BEGIN_SRC emacs-lisp :tangle init.el
-      (straight-use-package 'forge)
+    #+BEGIN_SRC emacs-lisp
+      (use-package forge
+        :after magit)
     #+END_SRC
 ** TODO Org-Mode
    References:
    - https://orgmode.org/
    - https://github.com/emacsmirror/org
    - https://github.com/raxod502/straight.el/issues/211#issuecomment-355379837
-   #+BEGIN_SRC emacs-lisp :tangle init.el
-     ;; (straight-use-package 'org)
-     (straight-override-recipe
-      '(org :type git :host github :repo "emacsmirror/org" :no-build t))
+   - https://github.com/raxod502/straight.el/tree/6c47044bfbc419527de4d345ceaf01dea3a3b03d#installing-org-with-straightel
+   #+BEGIN_SRC emacs-lisp
+     (require 'subr-x)
+     (straight-use-package 'git)
+
+     (defun org-git-version ()
+       "The Git version of org-mode.
+       Inserted by installing org-mode or when a release is made."
+       (require 'git)
+       (let ((git-repo (expand-file-name
+                        "straight/repos/org/" user-emacs-directory)))
+         (string-trim
+          (git-run "describe"
+                   "--match=release\*"
+                   "--abbrev=6"
+                   "HEAD"))))
+
+     (defun org-release ()
+       "The release version of org-mode.
+       Inserted by installing org-mode or when a release is made."
+       (require 'git)
+       (let ((git-repo (expand-file-name
+                        "straight/repos/org/" user-emacs-directory)))
+         (string-trim
+          (string-remove-prefix
+           "release_"
+           (git-run "describe"
+                    "--match=release\*"
+                    "--abbrev=0"
+                    "HEAD")))))
+
+     (provide 'org-version)
+
      (straight-use-package 'org-plus-contrib)
    #+END_SRC
+*** TODO Org-Capture
+    References:
+    - https://orgmode.org/manual/Easy-templates.html
+    - https://orgmode.org/manual/Capture-templates.html
+    - https://www.gnu.org/software/emacs/manual/html_node/org/Template-elements.html
+    - https://orgmode.org/manual/Template-expansion.html#Template-expansion
+    - https://orgmode.org/manual/Templates-in-contexts.html#Templates-in-contexts
+    - https://emacs.stackexchange.com/a/42140
+    - https://www.reddit.com/r/emacs/comments/7zqc7b/share_your_org_capture_templates/
+    #+BEGIN_SRC emacs-lisp
+      (setq org-capture-templates
+            '(("d" "Distribution" entry
+               (file+headline (lambda () (concat user-emacs-directory "distribution.org")) "New Content")
+               "** TODO \n   %U\n   References:\n   - \n   #+BEGIN_SRC emacs-lisp\n   #+END_SRC")))
+    #+END_SRC
+** TODO Projectile
+   [2018-12-30 Sun 14:15]
+   References:
+   - https://github.com/bbatsov/projectile
+   - https://docs.projectile.mx
+   #+BEGIN_SRC emacs-lisp
+     (use-package projectile)
+   #+END_SRC
+** TODO Unpackaged
+   :PROPERTIES:
+   :header-args: :tangle no
+   :END:
+   References:
+   - https://github.com/alphapapa/unpackaged.el
+   #+BEGIN_SRC emacs-lisp
+     (straight-use-package
+       '(unpackaged :type git :host github :repo "alphapapa/unpackaged.el"))
+     (require 'unpackaged)
+   #+END_SRC
+** TODO Avy
+   [2018-12-30 Sun 15:26]
+   References:
+   - https://github.com/abo-abo/avy
+   #+BEGIN_SRC emacs-lisp
+     (use-package avy
+       :config (progn
+                 (avy-setup-default)
+                 (global-set-key (kbd "C-c C-j") 'avy-resume)))
+   #+END_SRC
+* Appearance
+  :PROPERTIES:
+  :header-args: :tangle init.el
+  :END:
+** TODO Doom Theme
+   [2018-12-30 Sun 15:22]
+   References:
+   - https://github.com/hlissner/emacs-doom-themes
+   #+BEGIN_SRC emacs-lisp
+     (use-package doom-themes
+       :init (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+                   doom-themes-enable-italic t) ; if nil, italics is universally disabled
+       :config (progn
+                 (load-theme 'doom-tomorrow-night t)
+                 (doom-themes-visual-bell-config)
+                 (with-eval-after-load 'org (doom-themes-org-config))))
+   #+END_SRC
+** TODO Minion/Moody
+   [2018-12-30 Sun 15:38]
+   References:
+   - https://diego.codes/post/emacs-2018/
+   - http://manuel-uberti.github.io/emacs/2018/03/10/moody-and-minions/
+   - https://github.com/tarsius/minions
+   - https://github.com/tarsius/moody
+   #+BEGIN_SRC emacs-lisp
+     (use-package moody
+       :config
+       (setq x-underline-at-descent-line t)
+       (moody-replace-mode-line-buffer-identification)
+       (moody-replace-vc-mode))
+
+     (use-package minions
+       :config (minions-mode 1))
+   #+END_SRC
+* Cleanup
+  :PROPERTIES:
+  :header-args: :tangle init.el
+  :END:
+** Garbage Collection
+   References:
+   - https://github.com/hlissner/doom-emacs/issues/310#issuecomment-354424413
+   - http://bling.github.io/blog/2016/01/18/why-are-you-changing-gc-cons-threshold/
+   - https://www.gnu.org/software/emacs/manual/html_node/elisp/Standard-Hooks.html
+   - https://batsov.com/articles/2012/10/20/emacs-tip-number-6-remove-variable-and-function-definitions/
+   #+BEGIN_SRC emacs-lisp
+     (defun my/after-emacs-startup-gc ()
+       (setq file-name-handler-alist last-file-name-handler-alist
+             gc-cons-percentage 0.1
+             gc-cons-threshold 800000)
+       (makunbound 'last-file-name-handler-alist)
+       (fmakunbound 'my/after-emacs-startup-gc))
+     (add-hook 'emacs-startup-hook 'my/after-emacs-startup-gc)
+   #+END_SRC
+* New Content
+  :PROPERTIES:
+  :header-args: :tangle no
+  :END:

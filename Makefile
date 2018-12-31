@@ -9,6 +9,10 @@ freeze-packages: init.el
 install-packages: init.el
 	emacs -Q -l init.el --batch
 
+.PHONY: profile
+profile: init.el
+	emacs -Q -l init.el -nw --eval "(esup)"
+
 .PHONY: run
 run: init.el
 	emacs -Q -l init.el -nw
@@ -16,3 +20,7 @@ run: init.el
 .PHONY: self-edit
 self-edit: init.el
 	emacs -Q -l init.el -nw distribution.org
+
+.PHONY: thaw-packages
+thaw-packages: init.el
+	emacs -Q -l init.el --batch --eval "(straight-thaw-versions)"
