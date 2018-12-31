@@ -20,3 +20,7 @@ run: init.el
 .PHONY: self-edit
 self-edit: init.el
 	emacs -Q -l init.el -nw distribution.org
+
+.PHONY: thaw-packages
+thaw-packages: init.el
+	emacs -Q -l init.el --batch --eval "(straight-thaw-versions)"
