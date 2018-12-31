@@ -1,0 +1,10 @@
+# https://github.com/Silex/docker-emacs
+# https://hub.docker.com/r/silex/emacs
+image: silex/emacs:26.1-alpine-dev@sha256:c2a4b5cc5b8a0eb44dd2e54519f867724664e9609d426364a806ded3f40ed4a0
+
+build:
+  script:
+    - make init.el thaw-packages
+  cache:
+    paths:
+      - straight
