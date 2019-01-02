@@ -187,6 +187,7 @@
                    ("g" unpackaged/magit-status "magit status")
                    ("i" benchmark-init/show-durations-tree "init durations")
                    ("r" my/reload-config "reload config")
+                   ("s" hydra-straight-helper/body "straight.el")
                    ("u" use-package-report "use-package report"))
                  (defhydra hydra-straight-helper (:hint nil)
                    "
