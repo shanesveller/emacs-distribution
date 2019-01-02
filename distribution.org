@@ -381,6 +381,20 @@
        :commands (flycheck-mode global-flycheck-mode)
        :hook (after-init . global-flycheck-mode))
    #+END_SRC
+* Languages
+  :PROPERTIES:
+  :header-args: :tangle init.el
+  :END:
+** TODO Elixir
+*** TODO elixir-mode
+   [2019-01-02 Wed 14:34]
+   References:
+   - https://github.com/elixir-editors/emacs-elixir
+   #+BEGIN_SRC emacs-lisp
+     (use-package elixir-mode
+       :commands 'elixir-mode
+       :mode ("\\.elixir\\'" . elixir-mode))
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
