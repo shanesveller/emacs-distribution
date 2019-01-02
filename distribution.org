@@ -414,6 +414,18 @@
      (use-package rust-mode
        :config (setq rust-format-on-save t))
    #+END_SRC
+*** TODO flycheck-rust
+   [2019-01-02 Wed 14:42]
+   References:
+   - https://github.com/flycheck/flycheck-rust
+   - https://github.com/jwiegley/use-package#hooks
+   #+BEGIN_SRC emacs-lisp
+     ;; (with-eval-after-load 'rust-mode
+     ;;   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+     (use-package flycheck-rust
+       :after rust-mode
+       :hook (flycheck-mode-hook . flycheck-rust-setup))
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
