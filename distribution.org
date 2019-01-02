@@ -74,6 +74,12 @@
      (straight-use-package 'use-package)
      (setq straight-use-package-by-default t)
    #+END_SRC
+** Initialization Profiling
+   #+BEGIN_SRC emacs-lisp
+     (use-package benchmark-init
+       :demand
+       :hook (after-init . 'benchmark-init/deactivate))
+   #+END_SRC
 * Configuration
   :PROPERTIES:
   :header-args: :tangle init.el
