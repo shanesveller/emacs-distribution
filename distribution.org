@@ -386,6 +386,16 @@
   :PROPERTIES:
   :header-args: :tangle init.el
   :END:
+** TODO Clojure
+*** TODO cider
+   [2019-01-02 Wed 15:47]
+   References:
+   - https://github.com/clojure-emacs/cider
+   #+BEGIN_SRC emacs-lisp
+     (use-package cider
+       :defer t
+       :commands (cider-connect cider-jack-in))
+   #+END_SRC
 ** TODO Elixir
 *** TODO elixir-mode
    [2019-01-02 Wed 14:34]
