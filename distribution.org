@@ -291,8 +291,7 @@
     #+BEGIN_SRC emacs-lisp
       (use-package evil-org
         :commands 'evil-org-mode
-        :init (progn
-                (add-hook 'org-mode-hook 'evil-org-mode))
+        :hook (org-mode . evil-org-mode)
         :config (progn
                   (evil-org-set-key-theme '(navigation insert textobjects additional calendar))))
     #+END_SRC
@@ -371,7 +370,7 @@
    #+BEGIN_SRC emacs-lisp
      (use-package company
        :commands (company-mode global-company-mode)
-       :init (add-hook 'after-init-hook 'global-company-mode))
+       :hook (after-init . global-company-mode))
    #+END_SRC
 ** TODO Flycheck
    [2019-01-02 Wed 12:04]
@@ -379,7 +378,8 @@
    - http://www.flycheck.org/en/latest/
    #+BEGIN_SRC emacs-lisp
      (use-package flycheck
-       :config (global-flycheck-mode 1))
+       :commands (flycheck-mode global-flycheck-mode)
+       :hook (after-init . global-flycheck-mode))
    #+END_SRC
 * Appearance
   :PROPERTIES:
