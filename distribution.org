@@ -440,6 +440,15 @@
        :hook ((rust-mode-hook . racer-mode)
               (racer-mode-hook . eldoc-mode)))
    #+END_SRC
+*** TODO toml-mode
+   [2019-01-02 Wed 14:50]
+   References:
+   - https://github.com/dryman/toml-mode.el
+   #+BEGIN_SRC emacs-lisp
+     (use-package toml-mode
+       :defer t
+       :mode "/\\(Cargo.lock\\|\\.cargo/config\\)\\'")
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
