@@ -76,8 +76,9 @@
    #+END_SRC
 ** Use-package
    #+BEGIN_SRC emacs-lisp
+     (setq straight-use-package-by-default t
+           use-package-compute-statistics t)
      (straight-use-package 'use-package)
-     (setq straight-use-package-by-default t)
    #+END_SRC
 ** Initialization Profiling
    #+BEGIN_SRC emacs-lisp
@@ -183,7 +184,8 @@
                    "distribution"
                    ("c" org-capture "capture")
                    ("e" my/edit-config "edit config")
-                   ("r" my/reload-config "reload config"))
+                   ("r" my/reload-config "reload config")
+                   ("u" use-package-report "use-package report"))
                  (defhydra hydra-straight-helper (:hint nil)
                    "
      _c_heck all       |_f_etch all     |_m_erge all      |_n_ormalize all   |p_u_sh all
