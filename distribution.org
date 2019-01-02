@@ -534,6 +534,16 @@
        :defer t
        :commands 'web-mode)
    #+END_SRC
+** TODO Nix
+*** TODO nix-mode
+   [2019-01-02 Wed 17:06]
+   References:
+   - https://github.com/NixOS/nix-mode
+   #+BEGIN_SRC emacs-lisp
+     (use-package nix-mode
+       :defer t
+       :mode "\\.nix$\\'")
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
