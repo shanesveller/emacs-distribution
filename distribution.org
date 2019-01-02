@@ -312,6 +312,13 @@
        (setq imenu-list-focus-after-activation t
              imenu-list-auto-resize t))
    #+END_SRC
+** TODO General
+   [2019-01-02 Wed 10:39]
+   References:
+   - https://github.com/noctuid/general.el
+   #+BEGIN_SRC emacs-lisp
+     (use-package general)
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
