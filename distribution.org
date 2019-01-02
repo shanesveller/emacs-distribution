@@ -404,6 +404,17 @@
      (use-package alchemist
        :after 'elixir-mode)
    #+END_SRC
+** TODO Emacs-Lisp
+*** TODO lispy
+    [2019-01-02 Wed 15:08]
+    References:
+    - https://github.com/abo-abo/lispy
+    - https://github.com/jwiegley/use-package#hooks
+    #+BEGIN_SRC emacs-lisp
+      (use-package lispy
+        :commands 'lispy-mode
+        :hook (emacs-lisp-mode . lispy-mode))
+    #+END_SRC
 ** TODO Rust
 *** TODO rust-mode
    [2019-01-02 Wed 14:40]
