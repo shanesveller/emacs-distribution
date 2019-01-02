@@ -2,3 +2,4 @@
 .lsp-session-v*
 bookmarks
 init.el
+projectile-bookmarks.eld

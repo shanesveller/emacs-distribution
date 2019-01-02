@@ -343,7 +343,9 @@
    - https://github.com/bbatsov/projectile
    - https://docs.projectile.mx
    #+BEGIN_SRC emacs-lisp
-     (use-package projectile)
+     (use-package projectile
+       :defer t
+       :hook (prog-mode . projectile-mode))
    #+END_SRC
 ** TODO Unpackaged
    References:
