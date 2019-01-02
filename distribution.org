@@ -1,6 +1,6 @@
 #+STARTUP: content
 #+STARTUP: nohideblocks
-#+STARTUP: noindent
+#+STARTUP: indent
 #+OPTIONS: toc:4 h:4
 #+PROPERTY: header-args:emacs-lisp :comments link
 
@@ -14,6 +14,10 @@
 **** Setq vs Defvar
      References:
      - https://emacs.stackexchange.com/questions/29710/whats-the-difference-between-setq-and-defvar
+*** Org Mode
+**** In-buffer settings
+     References
+     - https://orgmode.org/manual/In_002dbuffer-settings.html
 *** Notable Users
     - https://github.com/Fuco1
     - https://github.com/Malabarba
