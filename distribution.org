@@ -326,15 +326,12 @@
      (use-package projectile)
    #+END_SRC
 ** TODO Unpackaged
-   :PROPERTIES:
-   :header-args: :tangle no
-   :END:
    References:
    - https://github.com/alphapapa/unpackaged.el
    #+BEGIN_SRC emacs-lisp
-     (straight-use-package
-       '(unpackaged :type git :host github :repo "alphapapa/unpackaged.el"))
-     (require 'unpackaged)
+     (use-package unpackaged
+       :straight (:type git :host github :repo "alphapapa/unpackaged.el")
+       :commands 'unpackaged/magit-status)
    #+END_SRC
 ** TODO Avy
    [2018-12-30 Sun 15:26]
