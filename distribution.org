@@ -301,6 +301,17 @@
                  (avy-setup-default)
                  (global-set-key (kbd "C-c C-j") 'avy-resume)))
    #+END_SRC
+** TODO Imenu-List
+   [2019-01-02 Wed 10:29]
+   References:
+   - https://github.com/bmag/imenu-list
+   #+BEGIN_SRC emacs-lisp
+     (use-package imenu-list
+       :defer t
+       :init
+       (setq imenu-list-focus-after-activation t
+             imenu-list-auto-resize t))
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
