@@ -358,6 +358,14 @@
        :commands (company-mode global-company-mode)
        :init (add-hook 'after-init-hook 'global-company-mode))
    #+END_SRC
+** TODO Flycheck
+   [2019-01-02 Wed 12:04]
+   References:
+   - http://www.flycheck.org/en/latest/
+   #+BEGIN_SRC emacs-lisp
+     (use-package flycheck
+       :config (global-flycheck-mode 1))
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
