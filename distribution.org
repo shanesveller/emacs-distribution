@@ -124,6 +124,11 @@
    #+BEGIN_SRC emacs-lisp
      (use-package esup)
    #+END_SRC
+** Window Management
+*** Winner Mode
+    #+BEGIN_SRC emacs-lisp
+      (winner-mode 1)
+    #+END_SRC
 * Features
    :PROPERTIES:
    :header-args: :tangle init.el
