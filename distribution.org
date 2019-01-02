@@ -134,7 +134,7 @@
    - https://github.com/jschaf/esup
    - https://oremacs.com/2015/02/24/emacs-speed-test/
    #+BEGIN_SRC emacs-lisp
-     (use-package esup)
+     (use-package esup :commands 'esup)
    #+END_SRC
 ** Window Management
 *** Winner Mode
