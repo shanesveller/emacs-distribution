@@ -252,6 +252,15 @@
       (use-package forge
         :after magit)
     #+END_SRC
+*** TODO magit-gitflow
+   [2019-01-02 Wed 16:11]
+   References:
+   - https://github.com/jtatarik/magit-gitflow
+   #+BEGIN_SRC emacs-lisp
+     (use-package magit-gitflow
+       :after magit
+       :hook (magit-mode . turn-on-magit-gitflow))
+   #+END_SRC
 ** TODO Org-Mode
    References:
    - https://orgmode.org/
