@@ -391,6 +391,17 @@
        :commands (flycheck-mode global-flycheck-mode)
        :hook (after-init . global-flycheck-mode))
    #+END_SRC
+*** TODO flycheck-inline
+   [2019-01-02 Wed 15:55]
+   References:
+   - https://github.com/flycheck/flycheck-inline
+   - https://github.com/jwiegley/use-package#hooks
+   #+BEGIN_SRC emacs-lisp
+     (use-package flycheck-inline
+       :defer t
+       :after flycheck
+       :hook (flycheck-mode . turn-on-flycheck-inline))
+   #+END_SRC
 * Languages
   :PROPERTIES:
   :header-args: :tangle init.el
