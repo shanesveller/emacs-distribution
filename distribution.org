@@ -264,6 +264,14 @@
                (file+headline (lambda () (concat user-emacs-directory "distribution.org")) "New Content")
                "** TODO \n   %U\n   References:\n   - \n   #+BEGIN_SRC emacs-lisp\n   #+END_SRC")))
     #+END_SRC
+*** TODO Refile Targets
+    [2019-01-02 Wed 10:25]
+    References:
+    - https://www.reddit.com/r/emacs/comments/4366f9/how_do_orgrefiletargets_work/czfzxjj/
+    #+BEGIN_SRC emacs-lisp
+      (setq org-refile-targets
+            (quote (("distribution.org" :maxlevel . 2))))
+    #+END_SRC
 ** TODO Projectile
    [2018-12-30 Sun 14:15]
    References:
