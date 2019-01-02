@@ -395,6 +395,15 @@
        :commands 'elixir-mode
        :mode ("\\.elixir\\'" . elixir-mode))
    #+END_SRC
+*** TODO Alchemist
+   [2019-01-02 Wed 14:36]
+   References:
+   - https://github.com/tonini/alchemist.el
+   - https://alchemist.readthedocs.io/en/latest/configuration/
+   #+BEGIN_SRC emacs-lisp
+     (use-package alchemist
+       :after 'elixir-mode)
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
