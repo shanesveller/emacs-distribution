@@ -1,5 +1,6 @@
 #+STARTUP: content
 #+STARTUP: nohideblocks
+#+STARTUP: align
 #+STARTUP: indent
 #+OPTIONS: toc:4 h:4
 #+PROPERTY: header-args:emacs-lisp :comments link
