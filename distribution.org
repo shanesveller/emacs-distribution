@@ -426,6 +426,20 @@
        :after rust-mode
        :hook (flycheck-mode-hook . flycheck-rust-setup))
    #+END_SRC
+*** TODO racer
+   [2019-01-02 Wed 14:44]
+   References:
+   - https://github.com/racer-rust/emacs-racer
+   - https://github.com/jwiegley/use-package#hooks
+   #+BEGIN_SRC emacs-lisp
+     ;; (add-hook 'rust-mode-hook #'racer-mode)
+     ;; (add-hook 'racer-mode-hook #'eldoc-mode)
+     (use-package racer
+       :defer t
+       :after rust-mode
+       :hook ((rust-mode-hook . racer-mode)
+              (racer-mode-hook . eldoc-mode)))
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
