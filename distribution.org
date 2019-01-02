@@ -279,6 +279,8 @@
      (provide 'org-version)
 
      (straight-use-package 'org-plus-contrib)
+     (with-eval-after-load 'org
+       (require 'org-tempo))
    #+END_SRC
 *** TODO Evil-Org
     [2019-01-02 Wed 10:10]
