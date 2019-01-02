@@ -413,6 +413,15 @@
        :after flycheck
        :hook (flycheck-mode . turn-on-flycheck-inline))
    #+END_SRC
+** TODO smartparens
+   [2019-01-02 Wed 16:58]
+   References:
+   - https://github.com/Fuco1/smartparens
+   #+BEGIN_SRC emacs-lisp
+     (use-package smartparens
+       :defer t
+       :commands 'smartparens-mode)
+   #+END_SRC
 * Languages
   :PROPERTIES:
   :header-args: :tangle init.el
