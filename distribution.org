@@ -155,6 +155,15 @@
        :init (setq evil-want-C-i-jump nil)
        :config (evil-mode 1))
    #+END_SRC
+*** TODO evil-nerd-commenter
+   [2019-01-02 Wed 16:07]
+   References:
+   - https://github.com/redguardtoo/evil-nerd-commenter
+   #+BEGIN_SRC emacs-lisp
+     (use-package evil-nerd-commenter
+       :after evil
+       :config (evilnc-default-hotkeys))
+   #+END_SRC
 ** TODO Which-key
    References:
    - https://github.com/justbur/emacs-which-key
