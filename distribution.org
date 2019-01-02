@@ -348,6 +348,16 @@
    #+BEGIN_SRC emacs-lisp
      (use-package general)
    #+END_SRC
+** TODO Company
+   [2019-01-02 Wed 11:58]
+   References:
+   - http://company-mode.github.io/
+   - https://github.com/company-mode/company-mode/wiki/Third-Party-Packages
+   #+BEGIN_SRC emacs-lisp
+     (use-package company
+       :commands (company-mode global-company-mode)
+       :init (add-hook 'after-init-hook 'global-company-mode))
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
