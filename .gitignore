@@ -1,3 +1,4 @@
 *.elc
+.lsp-session-v*
 bookmarks
 init.el

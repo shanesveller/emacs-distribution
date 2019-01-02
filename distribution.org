@@ -415,6 +415,18 @@
   :PROPERTIES:
   :header-args: :tangle init.el
   :END:
+** LSP
+*** TODO lsp-mode
+   [2019-01-02 Wed 16:14]
+   References:
+   - https://github.com/emacs-lsp/lsp-mode
+   #+BEGIN_SRC emacs-lisp
+     (use-package lsp-mode :commands lsp)
+
+     (use-package lsp-ui :commands lsp-ui-mode)
+
+     (use-package company-lsp :commands company-lsp)
+   #+END_SRC
 ** TODO Clojure
 *** TODO cider
    [2019-01-02 Wed 15:47]
