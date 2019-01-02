@@ -523,6 +523,16 @@
        :defer t
        :mode "/\\(Cargo.lock\\|\\.cargo/config\\)\\'")
    #+END_SRC
+*** TODO cargo
+   [2019-01-02 Wed 16:45]
+   References:
+   - https://github.com/kwrooijen/cargo.el
+   #+BEGIN_SRC emacs-lisp
+     (use-package cargo
+       :defer t
+       :commands 'cargo-minor-mode
+       :hook (rust-mode . cargo-minor-mode))
+   #+END_SRC
 ** Web Technologies
 *** TODO web-mode
    [2019-01-02 Wed 14:38]
