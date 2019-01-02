@@ -137,9 +137,11 @@
    References:
    - https://github.com/emacs-evil/evil
    - https://www.emacswiki.org/emacs/Evil
+   - https://stackoverflow.com/a/22922161
    #+BEGIN_SRC emacs-lisp
-     (use-package evil)
-     (evil-mode 1)
+     (use-package evil
+       :init (setq evil-want-C-i-jump nil)
+       :config (evil-mode 1))
    #+END_SRC
 ** TODO Which-key
    References:
