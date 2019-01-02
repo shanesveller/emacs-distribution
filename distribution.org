@@ -557,6 +557,14 @@
      (use-package minions
        :config (minions-mode 1))
    #+END_SRC
+** TODO base16-theme
+   [2019-01-02 Wed 16:29]
+   References:
+   - https://github.com/belak/base16-emacs
+   #+BEGIN_SRC emacs-lisp
+     (use-package base16-theme
+       :config (load-theme 'base16-tomorrow-night t))
+   #+END_SRC
 * Cleanup
   :PROPERTIES:
   :header-args: :tangle init.el
