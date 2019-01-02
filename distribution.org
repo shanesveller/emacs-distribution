@@ -185,6 +185,7 @@
                    ("c" org-capture "capture")
                    ("e" my/edit-config "edit config")
                    ("g" unpackaged/magit-status "magit status")
+                   ("i" benchmark-init/show-durations-tree "init durations")
                    ("r" my/reload-config "reload config")
                    ("u" use-package-report "use-package report"))
                  (defhydra hydra-straight-helper (:hint nil)
