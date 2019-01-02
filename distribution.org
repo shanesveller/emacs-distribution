@@ -237,6 +237,18 @@
 
      (straight-use-package 'org-plus-contrib)
    #+END_SRC
+*** TODO Evil-Org
+    [2019-01-02 Wed 10:10]
+    References:
+    - https://github.com/Somelauw/evil-org-mode
+    #+BEGIN_SRC emacs-lisp
+      (use-package evil-org
+        :commands 'evil-org-mode
+        :init (progn
+                (add-hook 'org-mode-hook 'evil-org-mode))
+        :config (progn
+                  (evil-org-set-key-theme '(navigation insert textobjects additional calendar))))
+    #+END_SRC
 *** TODO Org-Capture
     References:
     - https://orgmode.org/manual/Easy-templates.html
