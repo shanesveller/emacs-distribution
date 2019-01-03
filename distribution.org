@@ -467,6 +467,19 @@
      (use-package alchemist
        :after 'elixir-mode)
    #+END_SRC
+*** TODO lsp-elixir
+   [2019-01-03 Thu 15:44]
+   References:
+   - https://github.com/trevoke/lsp-elixir
+   #+BEGIN_SRC emacs-lisp
+     (use-package lsp-elixir
+       :after (lsp-mode)
+       :straight (:type git :host github :repo "trevoke/lsp-elixir"
+                        :fork (:host github :repo "asummers/lsp-elixir" :branch "lsp-mode-changes"))
+       :hook (elixir-mode . lsp)
+       :config (when-let (elixir-ls-path (getenv "ELIXIR_LS_PATH"))
+                 (add-to-list 'exec-path elixir-ls-path)))
+   #+END_SRC
 ** TODO Emacs-Lisp
 *** TODO lispy
     [2019-01-02 Wed 15:08]
