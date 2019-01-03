@@ -455,8 +455,7 @@
    - https://github.com/elixir-editors/emacs-elixir
    #+BEGIN_SRC emacs-lisp
      (use-package elixir-mode
-       :commands 'elixir-mode
-       :mode ("\\.elixir\\'" . elixir-mode))
+       :commands 'elixir-mode)
    #+END_SRC
 *** TODO Alchemist
    [2019-01-02 Wed 14:36]
