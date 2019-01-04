@@ -372,6 +372,8 @@ References:
    - https://github.com/abo-abo/avy
    #+BEGIN_SRC emacs-lisp
      (use-package avy
+       :defer t
+       :commands (avy-isearch avy-pop-mark avy-resume avy-with)
        :config (progn
                  (avy-setup-default)
                  (global-set-key (kbd "C-c C-j") 'avy-resume)))
