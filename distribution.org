@@ -428,7 +428,7 @@
   :PROPERTIES:
   :header-args: :tangle init.el
   :END:
-** LSP
+** TODO LSP
 *** TODO lsp-mode
    [2019-01-02 Wed 16:14]
    References:
@@ -547,7 +547,7 @@
        :commands 'cargo-minor-mode
        :hook (rust-mode . cargo-minor-mode))
    #+END_SRC
-** Web Technologies
+** TODO Web Technologies
 *** TODO web-mode
    [2019-01-02 Wed 14:38]
    References:
