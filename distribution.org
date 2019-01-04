@@ -492,8 +492,7 @@ References:
    #+BEGIN_SRC emacs-lisp
      (use-package lsp-elixir
        :after (lsp-mode)
-       :straight (:type git :host github :repo "trevoke/lsp-elixir"
-                        :fork (:host github :repo "asummers/lsp-elixir" :branch "lsp-mode-changes"))
+       :straight (:type git :host github :repo "trevoke/lsp-elixir")
        :hook (elixir-mode . lsp)
        :config (when-let (elixir-ls-path (getenv "ELIXIR_LS_PATH"))
                  (add-to-list 'exec-path elixir-ls-path)))
