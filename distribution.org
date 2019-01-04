@@ -39,6 +39,10 @@
   :PROPERTIES:
   :header-args: :tangle init.el
   :END:
+** Lexical Bindings
+   #+BEGIN_SRC emacs-lisp :comments no
+     ;; -*- lexical-binding: t -*-
+   #+END_SRC
 ** Emacs Home Directory
    References:
    - https://emacs.stackexchange.com/questions/4253/how-to-start-emacs-with-a-custom-user-emacs-directory
