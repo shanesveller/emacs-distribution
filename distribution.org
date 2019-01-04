@@ -272,11 +272,11 @@ References:
        :hook (magit-mode . turn-on-magit-gitflow))
    #+END_SRC
 ** TODO Org-Mode
-   References:
-   - https://orgmode.org/
-   - https://github.com/emacsmirror/org
-   - https://github.com/raxod502/straight.el/issues/211#issuecomment-355379837
-   - https://github.com/raxod502/straight.el/tree/6c47044bfbc419527de4d345ceaf01dea3a3b03d#installing-org-with-straightel
+References:
+- https://orgmode.org/
+- https://github.com/emacsmirror/org
+- https://github.com/raxod502/straight.el/issues/211#issuecomment-355379837
+- https://github.com/raxod502/straight.el/tree/6c47044bfbc419527de4d345ceaf01dea3a3b03d#installing-org-with-straightel
    #+BEGIN_SRC emacs-lisp
      (require 'subr-x)
      (straight-use-package 'git)
@@ -309,9 +309,10 @@ References:
 
      (provide 'org-version)
 
-     (straight-use-package 'org-plus-contrib)
-     (with-eval-after-load 'org
-       (require 'org-tempo))
+     (use-package org
+       :defer t
+       :commands (org-babel-tangle-file org-mode)
+       :mode (("\\.org$" . org-mode)))
    #+END_SRC
 *** TODO Evil-Org
     [2019-01-02 Wed 10:10]
