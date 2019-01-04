@@ -511,6 +511,8 @@ References:
    - https://github.com/jwiegley/use-package#modes-and-interpreters
    #+BEGIN_SRC emacs-lisp
      (use-package rust-mode
+       :defer t
+       :commands 'rust-mode
        :config (setq rust-format-on-save t))
    #+END_SRC
 *** TODO flycheck-rust
