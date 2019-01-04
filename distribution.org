@@ -108,6 +108,11 @@ References:
      (setq user-full-name "Shane Sveller"
            user-mail-address "shane@shanesveller.com")
    #+END_SRC
+** Scratch buffer contents
+   [2019-01-04 Fri 10:11]
+   #+BEGIN_SRC emacs-lisp
+     (setq initial-scratch-message nil)
+   #+END_SRC
 * Behavior
   :PROPERTIES:
   :header-args: :tangle init.el
