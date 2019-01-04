@@ -54,6 +54,8 @@
    - https://batsov.com/articles/2012/10/20/emacs-tip-number-6-remove-variable-and-function-definitions/
    #+BEGIN_SRC emacs-lisp
      (defvar last-file-name-handler-alist file-name-handler-alist)
+     (defvar last-gc-cons-percentage gc-cons-percentage)
+     (defvar last-gc-cons-threshold gc-cons-threshold)
      (setq file-name-handler-alist nil
            gc-cons-percentage 0.9
            gc-cons-threshold most-positive-fixnum)
@@ -626,9 +628,11 @@
    #+BEGIN_SRC emacs-lisp
      (defun my/after-emacs-startup-gc ()
        (setq file-name-handler-alist last-file-name-handler-alist
-             gc-cons-percentage 0.1
-             gc-cons-threshold 800000)
+             gc-cons-percentage last-gc-cons-percentage
+             gc-cons-threshold last-gc-cons-threshold)
        (makunbound 'last-file-name-handler-alist)
+       (makunbound 'last-gc-cons-percentage)
+       (makunbound 'last-gc-cons-threshold)
        (fmakunbound 'my/after-emacs-startup-gc))
      (add-hook 'emacs-startup-hook 'my/after-emacs-startup-gc)
    #+END_SRC
