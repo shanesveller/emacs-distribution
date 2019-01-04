@@ -1,6 +1,9 @@
 init.el: distribution.org
 	emacs -Q --batch --eval "(progn (require 'ob-tangle) (dolist (file command-line-args-left) (with-current-buffer (find-file-noselect file) (org-babel-tangle))))" "distribution.org"
 
+init.elc: init.el
+	emacs -Q -l init.el --batch -f batch-byte-compile *.el
+
 .PHONY: benchmark-init
 benchmark-init: init.el
 	emacs -Q -l init.el -nw --eval "(benchmark-init/show-durations-tree)"
