@@ -178,8 +178,8 @@ References:
    References:
    - https://github.com/justbur/emacs-which-key
    #+BEGIN_SRC emacs-lisp
-     (use-package which-key)
-     (which-key-mode 1)
+     (use-package which-key
+       :config (which-key-mode 1))
    #+END_SRC
 ** TODO Counsel/Ivy/Swiper
    [2018-12-30 Sun 14:47]
