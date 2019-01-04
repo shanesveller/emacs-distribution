@@ -28,3 +28,7 @@ self-edit: init.el
 .PHONY: thaw-packages
 thaw-packages: init.el
 	emacs -Q -l init.el --batch --eval "(straight-thaw-versions)"
+
+.PHONY: update-packages
+update-packages: init.el
+	emacs -Q -l init.el --batch --eval "(progn (straight-pull-all) (straight-check-all) (straight-freeze-versions))"
