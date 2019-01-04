@@ -252,7 +252,8 @@ References:
    - https://github.com/tarsius/git-elisp-overview
    #+BEGIN_SRC emacs-lisp
      (use-package magit
-       :commands 'magit-status)
+       :commands 'magit-status
+       :custom (magit-rebase-arguments '("--autosquash" "--autostash" "--interactive")))
      (use-package evil-magit
        :after magit)
      (use-package magit-todos
