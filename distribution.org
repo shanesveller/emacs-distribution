@@ -592,8 +592,14 @@ References:
   :END:
 ** Disable menu bar
    [2019-01-02 Wed 16:48]
+   References:
+   - https://www.emacswiki.org/emacs/MenuBar
+   - https://www.emacswiki.org/emacs/ToolBar
+   - https://stackoverflow.com/a/5795518
    #+BEGIN_SRC emacs-lisp
      (menu-bar-mode -1)
+     (when (display-graphic-p)
+       (tool-bar-mode -1))
    #+END_SRC
 ** TODO Doom Theme
    [2018-12-30 Sun 15:22]
