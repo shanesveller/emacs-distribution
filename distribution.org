@@ -131,9 +131,12 @@ References:
      (defun my/reload-config ()
        "Automatically reloads configuration via org-babel-load-file"
        (interactive)
-       (progn
+       (straight-transaction
+         (straight-mark-transaction-as-init)
          (org-babel-tangle-file my/config-file)
-         (load-file user-init-file)))
+         (message "Reloading init.el...")
+         (load user-init-file nil 'nomessage)
+         (message "Reloading init.el... done.")))
    #+END_SRC
 ** Inhibit File Backups
    References:
