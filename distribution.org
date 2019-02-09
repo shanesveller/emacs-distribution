@@ -182,6 +182,16 @@ References:
        :after evil
        :config (evilnc-default-hotkeys))
    #+END_SRC
+*** TODO evil-collection
+   [2019-02-08 Fri 19:23]
+   References:
+   - https://github.com/emacs-evil/evil-collection
+   #+BEGIN_SRC emacs-lisp
+     (use-package evil-collection
+       :after '(evil magit-todos)
+       :config
+       (evil-collection-init 'magit-todos))
+   #+END_SRC
 ** TODO Which-key
    References:
    - https://github.com/justbur/emacs-which-key
