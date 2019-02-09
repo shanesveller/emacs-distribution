@@ -259,8 +259,6 @@ References:
        :custom (magit-rebase-arguments '("--autosquash" "--autostash" "--interactive")))
      (use-package evil-magit
        :after magit)
-     (use-package magit-todos
-       :after magit)
    #+END_SRC
 *** TODO Forge
     References:
@@ -279,6 +277,16 @@ References:
      (use-package magit-gitflow
        :after magit
        :hook (magit-mode . turn-on-magit-gitflow))
+   #+END_SRC
+*** TODO magit-todos
+   [2019-02-08 Fri 19:22]
+   References:
+   - https://github.com/alphapapa/magit-todos
+   #+BEGIN_SRC emacs-lisp
+     (use-package magit-todos
+       :after magit
+       :config
+       (magit-todos-mode 1))
    #+END_SRC
 ** TODO Org-Mode
 References:
