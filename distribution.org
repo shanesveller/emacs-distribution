@@ -511,6 +511,18 @@ References:
        :config
        (flycheck-mix-setup))
    #+END_SRC
+*** TODO flycheck-credo
+   [2019-02-08 Fri 19:17]
+   References:
+   - https://github.com/karmajunkie/flycheck-elixir-credo
+   - https://github.com/aaronjensen/flycheck-credo
+   #+BEGIN_SRC emacs-lisp
+     (use-package flycheck-credo
+       :after 'elixir-mode
+       :commands 'flycheck-credo-setup
+       :config
+       (flycheck-credo-setup))
+   #+END_SRC
 ** TODO Emacs-Lisp
 *** TODO lispy
     [2019-01-02 Wed 15:08]
