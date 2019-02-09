@@ -500,6 +500,17 @@ References:
        :config (when-let (elixir-ls-path (getenv "ELIXIR_LS_PATH"))
                  (add-to-list 'exec-path elixir-ls-path)))
    #+END_SRC
+*** TODO flycheck-mix
+   [2019-02-08 Fri 19:16]
+   References:
+   - https://github.com/tomekowal/flycheck-mix
+   #+BEGIN_SRC emacs-lisp
+     (use-package flycheck-mix
+       :after 'elixir-mode
+       :commands 'flycheck-mix-setup
+       :config
+       (flycheck-mix-setup))
+   #+END_SRC
 ** TODO Emacs-Lisp
 *** TODO lispy
     [2019-01-02 Wed 15:08]
