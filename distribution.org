@@ -31,6 +31,7 @@
 *** Notable Configurations
 - http://pages.sachachua.com/.emacs.d/Sacha.html
 - https://github.com/jwiegley/dot-emacs
+- https://github.com/purcell/emacs.d
 *** Blog Posts
     - https://diego.codes/post/emacs-2018/
 ** Package Management
