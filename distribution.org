@@ -35,6 +35,8 @@
     - https://github.com/raxod502/straight.el
 *** Use-package
     - https://github.com/jwiegley/use-package
+** Default Keybindings
+- ~g x~ - ~browse-url-at-point~
 * Bootstrap
   :PROPERTIES:
   :header-args: :tangle init.el
