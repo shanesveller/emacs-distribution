@@ -115,6 +115,11 @@ References:
    #+BEGIN_SRC emacs-lisp
      (setq initial-scratch-message nil)
    #+END_SRC
+** TODO Tab Width
+   [2019-02-10 Sun 11:39]
+   #+BEGIN_SRC emacs-lisp
+     (setq-default tab-width 2)
+   #+END_SRC
 * Behavior
   :PROPERTIES:
   :header-args: :tangle init.el
