@@ -669,6 +669,14 @@ References:
        :defer t
        :mode "\\.nix$\\'")
    #+END_SRC
+** TODO graphviz
+   [2019-02-10 Sun 13:24]
+   References:
+   - https://github.com/ppareit/graphviz-dot-mode
+   #+BEGIN_SRC emacs-lisp
+     (use-package graphviz-dot-mode
+       :defer t)
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
