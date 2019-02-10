@@ -221,7 +221,9 @@ References:
    - https://github.com/justbur/emacs-which-key
    #+BEGIN_SRC emacs-lisp
      (use-package which-key
-       :config (which-key-mode 1))
+       :config
+       (which-key-mode 1)
+       (which-key-setup-minibuffer))
    #+END_SRC
 ** TODO Counsel/Ivy/Swiper
    [2018-12-30 Sun 14:47]
