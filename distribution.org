@@ -522,6 +522,17 @@ References:
        (dap-mode 1)
        (dap-ui-mode 1))
    #+END_SRC
+*** TODO company-lsp
+   [2019-02-10 Sun 14:49]
+   References:
+   - http://company-mode.github.io/
+   - https://github.com/tigersoldier/company-lsp
+   #+BEGIN_SRC emacs-lisp
+     (use-package company-lsp
+       :after company-mode
+       :config
+       (push 'company-lsp company-backends))
+   #+END_SRC
 ** TODO Clojure
 *** TODO cider
    [2019-01-02 Wed 15:47]
