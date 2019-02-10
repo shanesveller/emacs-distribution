@@ -171,6 +171,18 @@ References:
     #+BEGIN_SRC emacs-lisp
       (winner-mode 1)
     #+END_SRC
+** TODO undo-tree
+   [2019-02-10 Sun 11:30]
+   References:
+   - https://elpa.gnu.org/packages/undo-tree.html
+   - http://www.dr-qubit.org/undo-tree.html
+   - http://pragmaticemacs.com/emacs/advanced-undoredo-with-undo-tree/
+   - https://cestlaz.github.io/posts/using-emacs-16-undo-tree/
+   #+BEGIN_SRC emacs-lisp
+     (use-package undo-tree
+       :defer
+       (global-undo-tree-mode))
+   #+END_SRC
 * Features
    :PROPERTIES:
    :header-args: :tangle init.el
