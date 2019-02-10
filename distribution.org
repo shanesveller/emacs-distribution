@@ -120,6 +120,11 @@ References:
    #+BEGIN_SRC emacs-lisp
      (setq-default tab-width 2)
    #+END_SRC
+** TODO Encryption Target
+   [2019-02-10 Sun 11:56]
+   #+BEGIN_SRC emacs-lisp
+     (setq epa-file-encrypt-to '("shanesveller@gmail.com" "shane@shanesveller.com"))
+   #+END_SRC
 * Behavior
   :PROPERTIES:
   :header-args: :tangle init.el
