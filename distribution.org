@@ -409,7 +409,9 @@ References:
    #+BEGIN_SRC emacs-lisp
      (use-package projectile
        :defer t
-       :hook (prog-mode . projectile-mode))
+       :hook (prog-mode . projectile-mode)
+       :config
+       (projectile-global-mode 1))
    #+END_SRC
 ** TODO Unpackaged
    References:
