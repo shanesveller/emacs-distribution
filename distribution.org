@@ -404,6 +404,14 @@ References:
       (setq org-refile-targets
             (quote (("distribution.org" :maxlevel . 2))))
     #+END_SRC
+*** TODO org-super-agenda
+   [2019-02-10 Sun 15:04]
+   References:
+   - https://github.com/alphapapa/org-super-agenda
+   #+BEGIN_SRC emacs-lisp
+     (use-package org-super-agenda
+       :defer t)
+   #+END_SRC
 ** TODO Projectile
    [2018-12-30 Sun 14:15]
    References:
