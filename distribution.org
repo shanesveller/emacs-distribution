@@ -506,6 +506,17 @@ References:
 
      (use-package company-lsp :commands company-lsp)
    #+END_SRC
+*** TODO dap-mode
+   [2019-02-10 Sun 13:17]
+   References:
+   - https://github.com/yyoncho/dap-mode
+   #+BEGIN_SRC emacs-lisp
+     (use-package dap-mode
+       :defer t
+       :config
+       (dap-mode 1)
+       (dap-ui-mode 1))
+   #+END_SRC
 ** TODO Clojure
 *** TODO cider
    [2019-01-02 Wed 15:47]
