@@ -488,10 +488,12 @@ References:
    [2019-01-02 Wed 16:58]
    References:
    - https://github.com/Fuco1/smartparens
+   - https://github.com/jwiegley/use-package#hooks
    #+BEGIN_SRC emacs-lisp
      (use-package smartparens
        :defer t
-       :commands 'smartparens-mode)
+       :commands 'smartparens-mode
+       :hook (elixir-mode . smartparens-mode))
    #+END_SRC
 * Languages
   :PROPERTIES:
