@@ -28,6 +28,9 @@
     - https://github.com/bbatsov
     - https://github.com/jwiegley
     - https://github.com/mickeynp
+*** Notable Configurations
+- http://pages.sachachua.com/.emacs.d/Sacha.html
+- https://github.com/jwiegley/dot-emacs
 *** Blog Posts
     - https://diego.codes/post/emacs-2018/
 ** Package Management
