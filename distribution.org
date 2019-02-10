@@ -759,6 +759,14 @@ References:
      (use-package base16-theme
        :config (load-theme 'base16-tomorrow-night t))
    #+END_SRC
+** TODO doom-modeline
+   [2019-02-10 Sun 14:27]
+   References:
+   - https://github.com/seagle0128/doom-modeline
+   #+BEGIN_SRC emacs-lisp
+     (use-package doom-modeline
+       :hook (after-init . doom-modeline-mode))
+   #+END_SRC
 * Cleanup
   :PROPERTIES:
   :header-args: :tangle init.el
