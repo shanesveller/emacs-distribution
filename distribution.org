@@ -801,3 +801,11 @@ References:
   :PROPERTIES:
   :header-args: :tangle no
   :END:
+** TODO exec-path-from-shell
+   [2019-02-10 Sun 15:21]
+   References:
+   - https://github.com/purcell/exec-path-from-shell
+   #+BEGIN_SRC emacs-lisp
+     (use-package exec-path-from-shell
+       :defer t)
+   #+END_SRC
