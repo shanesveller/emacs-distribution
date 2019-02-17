@@ -809,3 +809,12 @@ References:
      (use-package exec-path-from-shell
        :defer t)
    #+END_SRC
+** TODO reformatter
+   [2019-02-10 Sun 15:19]
+   References:
+   - https://github.com/purcell/reformatter.el
+   #+BEGIN_SRC emacs-lisp
+     (use-package reformatter
+       :defer t
+       :commands 'reformatter)
+   #+END_SRC
