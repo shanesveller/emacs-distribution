@@ -722,6 +722,18 @@ References:
      (use-package graphviz-dot-mode
        :defer t)
    #+END_SRC
+** TODO yaml-mode
+   [2019-02-17 Sun 11:03]
+   References:
+   - https://github.com/yoshiki/yaml-mode
+   - https://melpa.org/#/yaml-mode
+   #+BEGIN_SRC emacs-lisp
+     (use-package yaml-mode
+       :mode "\\.\\(yml\\|yaml\\)\\'"
+       :config (add-hook 'yaml-mode-hook
+                         '(lambda ()
+                            (define-key yaml-mode-map "\C-m" 'newline-and-indent))))
+   #+END_SRC
 * Appearance
   :PROPERTIES:
   :header-args: :tangle init.el
