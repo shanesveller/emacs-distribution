@@ -285,6 +285,15 @@ References:
                    ("e" straight-prune-build)
                    ("q" nil))))
    #+END_SRC
+** TODO transient
+   [2019-02-17 Sun 10:26]
+   References:
+   - https://github.com/magit/transient
+   - https://emacsair.me/2019/02/14/transient-0.1/
+   - https://magit.vc/manual/transient/index.html
+   #+BEGIN_SRC emacs-lisp
+     (use-package transient)
+   #+END_SRC
 ** TODO Magit
    References:
    - https://github.com/magit/magit
