@@ -320,6 +320,37 @@ References:
        (general-define-key
         "<f5>" 'my/distribution))
    #+END_SRC
+*** TODO transient-straight
+   [2019-02-18 Mon 14:22]
+   References:
+   - https://github.com/magit/transient
+   - https://emacsair.me/2019/02/14/transient-0.1/
+   - https://magit.vc/manual/transient/index.html
+   - https://github.com/abo-abo/hydra/wiki/straight.el
+   #+BEGIN_SRC emacs-lisp
+     (define-transient-command my/hydra-helper
+       ""
+       [[("c" "check all" straight-check-all)
+         ("C" "check package" straight-check-package)]
+        [("r" "rebuild all" straight-rebuild-all)
+         ("R" "rebuild package" straight-rebuild-package)]
+        [("f" "fetch all" straight-fetch-all)
+         ("F" "fetch package" straight-fetch-package)]
+        [("p" "pull all" straight-pull-all)
+         ("P" "pull package" straight-pull-package)]
+        [("m" "merge all" straight-merge-all)
+         ("M" "merge package" straight-merge-package)]
+        [("n" "normalize all" straight-normalize-all)
+         ("N" "normalize package" straight-normalize-package)]
+        [("u" "push all" straight-push-all)
+         ("U" "push package" straight-push-package)]
+        [("v" "freeze  versions" straight-freeze-versions)
+         ("V" "thaw versions" straight-thaw-versions)]
+        [("w" "start watcher" straight-watcher-start)
+         ("W" "quit watcher" straight-watcher-quit)]
+        [("g" "get recipe" straight-get-recipe)
+         ("e" "prune build" straight-prune-build)]])
+   #+END_SRC
 ** TODO Magit
    References:
    - https://github.com/magit/magit
