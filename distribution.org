@@ -275,9 +275,9 @@ References:
          ("i" "init durations" benchmark-init/show-durations-tree)]
         ["Shortcuts"
          ("g" "magit status" unpackaged/magit-status)]])
-     (with-eval-after-load 'general
-       (general-define-key
-        "<f5>" 'my/distribution))
+
+     (general-define-key
+      "<f5>" 'my/distribution)
    #+END_SRC
 *** TODO transient-straight
    [2019-02-18 Mon 14:22]
