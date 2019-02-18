@@ -486,7 +486,8 @@ References:
    References:
    - https://github.com/noctuid/general.el
    #+BEGIN_SRC emacs-lisp
-     (use-package general)
+     (use-package general
+       :commands 'general-define-key)
    #+END_SRC
 ** TODO Company
    [2019-01-02 Wed 11:58]
