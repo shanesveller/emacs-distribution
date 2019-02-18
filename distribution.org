@@ -253,7 +253,7 @@ References:
    - https://magit.vc/manual/transient/index.html
    #+BEGIN_SRC emacs-lisp
      (use-package transient
-       :commands (define-transient-command define-infix-command define-suffix-command))
+       :commands (define-transient-command define-infix-command define-suffix-command transient-append-suffix transient-insert-suffix))
    #+END_SRC
 *** TODO transient-distribution
    [2019-02-18 Mon 14:19]
@@ -269,7 +269,6 @@ References:
         ["Configuration"
          ("e" "edit config" my/edit-config)
          ("r" "reload config" my/reload-config)
-         ("s" "straight.el" my/hydra-helper)
          ("u" "use-package report" use-package-report)]
         ["Performance"
          ("i" "init durations" benchmark-init/show-durations-tree)]
@@ -309,6 +308,9 @@ References:
          ("W" "quit watcher" straight-watcher-quit)]
         [("g" "get recipe" straight-get-recipe)
          ("e" "prune build" straight-prune-build)]])
+
+     (transient-append-suffix 'my/distribution 'my/reload-config
+       '("s" "straight.el" my/hydra-helper))
    #+END_SRC
 ** TODO Magit
    References:
