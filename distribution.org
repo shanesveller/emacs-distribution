@@ -293,7 +293,8 @@ References:
    - https://emacsair.me/2019/02/14/transient-0.1/
    - https://magit.vc/manual/transient/index.html
    #+BEGIN_SRC emacs-lisp
-     (use-package transient)
+     (use-package transient
+       :commands (define-transient-command define-infix-command define-suffix-command))
    #+END_SRC
 ** TODO Magit
    References:
