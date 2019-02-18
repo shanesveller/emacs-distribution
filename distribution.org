@@ -296,6 +296,30 @@ References:
      (use-package transient
        :commands (define-transient-command define-infix-command define-suffix-command))
    #+END_SRC
+*** TODO transient-distribution
+   [2019-02-18 Mon 14:19]
+   References:
+   - https://github.com/magit/transient
+   - https://emacsair.me/2019/02/14/transient-0.1/
+   - https://magit.vc/manual/transient/index.html
+   #+BEGIN_SRC emacs-lisp
+     (define-transient-command my/distribution
+       ""
+       [["Org-mode"
+         ("c" "capture" org-capture)]
+        ["Configuration"
+         ("e" "edit config" my/edit-config)
+         ("r" "reload config" my/reload-config)
+         ("s" "straight.el" hydra-straight-helper/body)
+         ("u" "use-package report" use-package-report)]
+        ["Performance"
+         ("i" "init durations" benchmark-init/show-durations-tree)]
+        ["Shortcuts"
+         ("g" "magit status" unpackaged/magit-status)]])
+     (with-eval-after-load 'general
+       (general-define-key
+        "<f5>" 'my/distribution))
+   #+END_SRC
 ** TODO Magit
    References:
    - https://github.com/magit/magit
