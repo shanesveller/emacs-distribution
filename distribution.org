@@ -12,6 +12,7 @@
    - https://www.emacswiki.org/
    - https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
 *** Emacs Lisp
+- https://www.emacswiki.org/emacs/ElispCookbook
 **** Setq vs Defvar
      References:
      - https://emacs.stackexchange.com/questions/29710/whats-the-difference-between-setq-and-defvar
