@@ -230,6 +230,14 @@ References:
        (which-key-mode 1)
        (which-key-setup-minibuffer))
    #+END_SRC
+** TODO General
+   [2019-01-02 Wed 10:39]
+   References:
+   - https://github.com/noctuid/general.el
+   #+BEGIN_SRC emacs-lisp
+     (use-package general
+       :commands 'general-define-key)
+   #+END_SRC
 ** TODO Counsel/Ivy/Swiper
    [2018-12-30 Sun 14:47]
    References:
@@ -482,14 +490,6 @@ References:
        :init
        (setq imenu-list-focus-after-activation t
              imenu-list-auto-resize t))
-   #+END_SRC
-** TODO General
-   [2019-01-02 Wed 10:39]
-   References:
-   - https://github.com/noctuid/general.el
-   #+BEGIN_SRC emacs-lisp
-     (use-package general
-       :commands 'general-define-key)
    #+END_SRC
 ** TODO Company
    [2019-01-02 Wed 11:58]
