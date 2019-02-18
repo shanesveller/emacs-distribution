@@ -650,7 +650,7 @@ References:
     References:
     - https://github.com/abo-abo/lispy
     - https://github.com/jwiegley/use-package#hooks
-    #+BEGIN_SRC emacs-lisp
+    #+BEGIN_SRC emacs-lisp :tangle no
       (use-package lispy
         :commands 'lispy-mode
         :hook (emacs-lisp-mode . lispy-mode))
