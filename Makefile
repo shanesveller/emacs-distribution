@@ -24,6 +24,10 @@ profile: init.el
 run: init.el
 	emacs -Q -l init.el -nw
 
+.PHONY: run-gui
+run-gui: init.el
+	emacs -Q -l init.el
+
 .PHONY: self-edit
 self-edit: init.el
 	emacs -Q -l init.el -nw distribution.org
