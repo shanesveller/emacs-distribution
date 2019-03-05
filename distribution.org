@@ -188,6 +188,15 @@ References:
        :defer
        (global-undo-tree-mode))
    #+END_SRC
+** TODO ibuffer
+   [2019-03-05 Tue 16:23]
+   References:
+   - https://www.emacswiki.org/emacs/IbufferMode
+   #+BEGIN_SRC emacs-lisp
+     (use-package ibuffer
+       :defer t
+       :bind ("C-x C-b" . ibuffer))
+   #+END_SRC
 * Features
    :PROPERTIES:
    :header-args: :tangle init.el
