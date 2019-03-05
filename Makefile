@@ -31,6 +31,7 @@ self-edit: init.el
 .PHONY: thaw-packages
 thaw-packages: init.el
 	emacs -Q -l init.el --batch --eval "(straight-thaw-versions)"
+	$(MAKE) install-packages
 
 .PHONY: update-packages
 update-packages: init.el
