@@ -313,7 +313,7 @@ References:
         [("v" "freeze  versions" straight-freeze-versions)
          ("V" "thaw versions" straight-thaw-versions)]
         [("w" "start watcher" straight-watcher-start)
-         ("W" "quit watcher" straight-watcher-quit)]
+         ("W" "stop watcher" straight-watcher-stop)]
         [("g" "get recipe" straight-get-recipe)
          ("e" "prune build" straight-prune-build)]])
 
