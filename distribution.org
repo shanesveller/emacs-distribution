@@ -832,7 +832,15 @@ References:
    - https://github.com/seagle0128/doom-modeline
    #+BEGIN_SRC emacs-lisp
      (use-package doom-modeline
-       :hook (after-init . doom-modeline-mode))
+       :hook (after-init . doom-modeline-mode)
+       :config
+       (setq doom-modeline-buffer-file-name-style 'truncate-except-project
+             doom-modeline-enable-variable-pitch nil
+             doom-modeline-github nil
+             doom-modeline-icon t
+             doom-modeline-major-mode-color-icon nil
+             doom-modeline-major-mode-icon t
+             doom-modeline-minor-modes t))
    #+END_SRC
 * Cleanup
   :PROPERTIES:
