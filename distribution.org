@@ -466,12 +466,21 @@ References:
    References:
    - https://github.com/bbatsov/projectile
    - https://docs.projectile.mx
+   - https://github.com/purcell/ibuffer-projectile
    #+BEGIN_SRC emacs-lisp
      (use-package projectile
        :defer t
        :hook (prog-mode . projectile-mode)
        :config
        (projectile-global-mode 1))
+
+     (use-package ibuffer-projectile
+       :defer t
+       :after 'projectile
+       :hook (ibuffer . (lambda ()
+                          (ibuffer-projectile-set-filter-groups)
+                          (unless (eq ibuffer-sorting-mode 'alphabetic)
+                            (ibuffer-do-sort-by-alphabetic)))))
    #+END_SRC
 ** TODO Unpackaged
    References:
