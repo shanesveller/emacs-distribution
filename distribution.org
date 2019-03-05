@@ -311,24 +311,24 @@ References:
      (define-transient-command my/hydra-helper
        ""
        [[("c" "check all" straight-check-all)
-         ("C" "check package" straight-check-package)]
-        [("r" "rebuild all" straight-rebuild-all)
+         ("C" "check package" straight-check-package)
+         ("r" "rebuild all" straight-rebuild-all)
          ("R" "rebuild package" straight-rebuild-package)]
         [("f" "fetch all" straight-fetch-all)
-         ("F" "fetch package" straight-fetch-package)]
-        [("p" "pull all" straight-pull-all)
+         ("F" "fetch package" straight-fetch-package)
+         ("p" "pull all" straight-pull-all)
          ("P" "pull package" straight-pull-package)]
         [("m" "merge all" straight-merge-all)
-         ("M" "merge package" straight-merge-package)]
-        [("n" "normalize all" straight-normalize-all)
+         ("M" "merge package" straight-merge-package)
+         ("n" "normalize all" straight-normalize-all)
          ("N" "normalize package" straight-normalize-package)]
         [("u" "push all" straight-push-all)
-         ("U" "push package" straight-push-package)]
-        [("v" "freeze  versions" straight-freeze-versions)
+         ("U" "push package" straight-push-package)
+         ("v" "freeze  versions" straight-freeze-versions)
          ("V" "thaw versions" straight-thaw-versions)]
         [("w" "start watcher" straight-watcher-start)
-         ("W" "stop watcher" straight-watcher-stop)]
-        [("g" "get recipe" straight-get-recipe)
+         ("W" "stop watcher" straight-watcher-stop)
+         ("g" "get recipe" straight-get-recipe)
          ("e" "prune build" straight-prune-build)]])
 
      (transient-append-suffix 'my/distribution 'my/reload-config
