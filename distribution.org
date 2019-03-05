@@ -781,10 +781,14 @@ References:
    - https://www.emacswiki.org/emacs/MenuBar
    - https://www.emacswiki.org/emacs/ToolBar
    - https://stackoverflow.com/a/5795518
+   - https://github.com/angrybacon/dotemacs/blob/d1a941fabed43f7a38db679e916f36ddb8b13a58/dotemacs.org#use-better-defaults
    #+BEGIN_SRC emacs-lisp
      (menu-bar-mode -1)
      (when (display-graphic-p)
-       (tool-bar-mode -1))
+       (blink-cursor-mode -1)
+       (scroll-bar-mode -1)
+       (tool-bar-mode -1)
+       (tooltip-mode -1))
    #+END_SRC
 ** TODO Doom Theme
    [2018-12-30 Sun 15:22]
