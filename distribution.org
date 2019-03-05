@@ -351,7 +351,11 @@ References:
    #+BEGIN_SRC emacs-lisp
      (use-package magit-gitflow
        :after magit
-       :hook (magit-mode . turn-on-magit-gitflow))
+       :hook (magit-mode . turn-on-magit-gitflow)
+       :config
+       (transient-append-suffix 'magit-dispatch 'magit-worktree
+         '("C-f" "Git-flow" magit-gitflow-popup)))
+
    #+END_SRC
 *** TODO magit-todos
    [2019-02-08 Fri 19:22]
