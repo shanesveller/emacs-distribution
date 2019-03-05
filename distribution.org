@@ -842,6 +842,15 @@ References:
              doom-modeline-major-mode-icon t
              doom-modeline-minor-modes t))
    #+END_SRC
+** TODO rainbow-delimiters
+   [2019-03-05 Tue 16:33]
+   References:
+   - https://github.com/Fanael/rainbow-delimiters
+   #+BEGIN_SRC emacs-lisp
+     (use-package rainbow-delimiters
+       :defer t
+       :hook (prog-mode . rainbow-delimiters-mode))
+   #+END_SRC
 * Cleanup
   :PROPERTIES:
   :header-args: :tangle init.el
