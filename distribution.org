@@ -188,6 +188,11 @@ References:
        :defer
        (global-undo-tree-mode))
    #+END_SRC
+** TODO yes-or-no-prompt
+   [2019-03-05 Tue 16:20]
+   #+BEGIN_SRC emacs-lisp
+     (fset 'yes-or-no-p 'y-or-n-p)
+   #+END_SRC
 ** TODO ibuffer
    [2019-03-05 Tue 16:23]
    References:
