@@ -890,17 +890,20 @@ References:
    [2019-02-10 Sun 14:27]
    References:
    - https://github.com/seagle0128/doom-modeline
+   - https://github.com/domtronn/all-the-icons.el#installation
    #+BEGIN_SRC emacs-lisp
      (use-package doom-modeline
        :hook (after-init . doom-modeline-mode)
        :config
-       (setq doom-modeline-buffer-file-name-style 'truncate-except-project
-             doom-modeline-enable-variable-pitch nil
-             doom-modeline-github nil
-             doom-modeline-icon t
-             doom-modeline-major-mode-color-icon nil
-             doom-modeline-major-mode-icon t
-             doom-modeline-minor-modes t))
+       (let ((display-icons (display-graphic-p)))
+         (setq doom-modeline-buffer-file-name-style 'truncate-except-project
+               doom-modeline-enable-variable-pitch nil
+               doom-modeline-github nil
+               doom-modeline-icon display-icons
+               doom-modeline-lsp nil
+               doom-modeline-major-mode-color-icon display-icons
+               doom-modeline-major-mode-icon display-icons
+               doom-modeline-minor-modes t)))
    #+END_SRC
 ** TODO rainbow-delimiters
    [2019-03-05 Tue 16:33]
