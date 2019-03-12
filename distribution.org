@@ -171,6 +171,7 @@ References:
 ** Startup Performance
    References:
    - https://github.com/jschaf/esup
+   - https://github.com/jschaf/esup/issues/51
    - https://oremacs.com/2015/02/24/emacs-speed-test/
    #+BEGIN_SRC emacs-lisp
      (use-package esup :commands 'esup)
