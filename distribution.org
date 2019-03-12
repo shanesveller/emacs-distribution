@@ -932,7 +932,8 @@ References:
        (makunbound 'last-file-name-handler-alist)
        (makunbound 'last-gc-cons-percentage)
        (makunbound 'last-gc-cons-threshold)
-       (fmakunbound 'my/after-emacs-startup-gc))
+       (fmakunbound 'my/after-emacs-startup-gc)
+       (remove-hook 'emacs-startup-hook 'my/after-emacs-startup-gc))
      (add-hook 'emacs-startup-hook 'my/after-emacs-startup-gc)
    #+END_SRC
 * New Content
