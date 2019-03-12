@@ -577,6 +577,14 @@ References:
      (use-package yasnippet-snippets
        :after (elixir-mode rust-mode))
    #+END_SRC
+** TODO paradox
+   [2019-03-07 Thu 14:02]
+   References:
+   - https://github.com/Malabarba/paradox
+   #+BEGIN_SRC emacs-lisp
+     (use-package paradox
+       :commands 'paradox-list-packages)
+   #+END_SRC
 * Languages
   :PROPERTIES:
   :header-args: :tangle init.el
