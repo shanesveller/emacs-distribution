@@ -674,6 +674,14 @@ References:
      (use-package expand-region
        :defer t)
    #+END_SRC
+** TODO hackernews
+   [2019-03-11 Mon 19:40]
+   References:
+   - https://github.com/clarete/hackernews.el
+   #+BEGIN_SRC emacs-lisp
+     (use-package hackernews
+       :commands 'hackernews)
+   #+END_SRC
 * Languages
   :PROPERTIES:
   :header-args: :tangle init.el

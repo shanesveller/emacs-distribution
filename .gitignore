@@ -2,4 +2,5 @@
 .lsp-session-v*
 bookmarks
 init.el
+hackernews
 projectile-bookmarks.eld
