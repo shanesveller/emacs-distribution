@@ -480,6 +480,14 @@ References:
      (use-package org-super-agenda
        :defer t)
    #+END_SRC
+*** TODO ox-reveal
+   [2019-03-07 Thu 14:07]
+   References:
+   - https://github.com/yjwen/org-reveal
+   #+BEGIN_SRC emacs-lisp
+     (use-package ox-reveal
+       :after 'org)
+   #+END_SRC
 ** TODO Projectile
    [2018-12-30 Sun 14:15]
    References:
