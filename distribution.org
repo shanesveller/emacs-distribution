@@ -936,6 +936,13 @@ References:
        (remove-hook 'emacs-startup-hook 'my/after-emacs-startup-gc))
      (add-hook 'emacs-startup-hook 'my/after-emacs-startup-gc)
    #+END_SRC
+** Run Hooks
+References:
+- https://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html#Startup-Summary
+- https://www.gnu.org/software/emacs/manual/html_node/elisp/Init-File.html#Init-File
+#+BEGIN_SRC emacs-lisp
+  (run-hooks 'after-init-hook 'emacs-startup-hook)
+#+END_SRC
 * New Content
   :PROPERTIES:
   :header-args: :tangle no
