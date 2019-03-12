@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: mix exdoc configuration
+# key: mixdoc
+# --
+
+# Docs
+name: "$1",
+source_url: "$2",
+homepage_url: "$3",
+docs: [
+  main: "readme"
+	extras: ["README.md"]
+],
