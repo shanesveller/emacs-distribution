@@ -656,6 +656,14 @@ References:
        :config
        (setq dumb-jump-selector 'ivy))
    #+END_SRC
+** TODO outshine
+   [2019-03-07 Thu 13:59]
+   References:
+   - https://github.com/alphapapa/outshine
+   #+BEGIN_SRC emacs-lisp
+     (use-package outshine
+       :commands 'outshine-minor-mode)
+   #+END_SRC
 * Languages
   :PROPERTIES:
   :header-args: :tangle init.el
