@@ -682,6 +682,18 @@ References:
      (use-package hackernews
        :commands 'hackernews)
    #+END_SRC
+** TODO reddit
+   [2019-03-11 Mon 19:41]
+   References:
+   - https://github.com/ahungry/md4rd
+   - https://github.com/ahungry/md4rd#keys
+   #+BEGIN_SRC emacs-lisp
+     (use-package md4rd
+       :commands 'md4rd
+       :config
+       (setq md4rd-subs-active
+             '(emacs evilmode lisp orgmode planetemacs spacemacs)))
+   #+END_SRC
 * Languages
   :PROPERTIES:
   :header-args: :tangle init.el
