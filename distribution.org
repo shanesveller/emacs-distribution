@@ -669,7 +669,7 @@ References:
    - https://alchemist.readthedocs.io/en/latest/configuration/
    #+BEGIN_SRC emacs-lisp
      (use-package alchemist
-       :after 'elixir-mode)
+       :defer t)
    #+END_SRC
 *** TODO lsp-elixir
    [2019-01-03 Thu 15:44]
