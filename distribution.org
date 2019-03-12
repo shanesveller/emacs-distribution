@@ -105,7 +105,7 @@ References:
    #+BEGIN_SRC emacs-lisp
      (use-package benchmark-init
        :demand
-       :hook (after-init . 'benchmark-init/deactivate))
+       :hook (after-init . benchmark-init/deactivate))
    #+END_SRC
 * Configuration
   :PROPERTIES:
