@@ -488,6 +488,14 @@ References:
      (use-package ox-reveal
        :after 'org)
    #+END_SRC
+*** TODO org-d20
+   [2019-03-07 Thu 14:00]
+   References:
+   - https://spwhitton.name/tech/code/org-d20/
+   #+BEGIN_SRC emacs-lisp
+     (use-package org-d20
+       :commands 'org-d20-mode)
+   #+END_SRC
 ** TODO Projectile
    [2018-12-30 Sun 14:15]
    References:
