@@ -664,6 +664,15 @@ References:
      (use-package outshine
        :commands 'outshine-minor-mode)
    #+END_SRC
+** TODO expand-region
+   [2019-03-07 Thu 14:07]
+   References:
+   - https://github.com/magnars/expand-region.el
+   - http://emacsrocks.com/e09.html
+   #+BEGIN_SRC emacs-lisp
+     (use-package expand-region
+       :defer t)
+   #+END_SRC
 * Languages
   :PROPERTIES:
   :header-args: :tangle init.el
