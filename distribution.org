@@ -585,6 +585,16 @@ References:
      (use-package paradox
        :commands 'paradox-list-packages)
    #+END_SRC
+** TODO elfeed                                                  :elfeed:rss:
+   [2019-03-07 Thu 14:08]
+   References:
+   - https://github.com/skeeto/elfeed
+   #+BEGIN_SRC emacs-lisp
+     (use-package elfeed
+       :commands 'elfeed
+       :config
+       (setq elfeed-feeds '("http://planet.emacsen.org/atom.xml")))
+   #+END_SRC
 * Languages
   :PROPERTIES:
   :header-args: :tangle init.el
