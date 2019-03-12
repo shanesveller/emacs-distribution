@@ -13,9 +13,13 @@
    - https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
 *** Emacs Lisp
 - https://www.emacswiki.org/emacs/ElispCookbook
+**** Emacs Package Developer's Handbook
+References:
+- https://github.com/alphapapa/emacs-package-dev-handbook
+- https://alphapapa.github.io/emacs-package-dev-handbook/
 **** Setq vs Defvar
-     References:
-     - https://emacs.stackexchange.com/questions/29710/whats-the-difference-between-setq-and-defvar
+References:
+- https://emacs.stackexchange.com/questions/29710/whats-the-difference-between-setq-and-defvar
 *** Org Mode
 **** In-buffer settings
      References
