@@ -595,6 +595,16 @@ References:
        :config
        (setq elfeed-feeds '("http://planet.emacsen.org/atom.xml")))
    #+END_SRC
+*** TODO elfeed-org                                        :elfeed:org:rss:
+   [2019-03-11 Mon 19:02]
+   References:
+   - https://github.com/remyhonig/elfeed-org
+   #+BEGIN_SRC emacs-lisp
+     (use-package elfeed-org
+       :after 'elfeed
+       :config
+       (elfeed-org))
+   #+END_SRC
 * Languages
   :PROPERTIES:
   :header-args: :tangle init.el
