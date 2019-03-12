@@ -965,6 +965,16 @@ References:
        :defer t
        :hook (prog-mode . rainbow-delimiters-mode))
    #+END_SRC
+** TODO golden-ratio
+   [2019-03-07 Thu 13:57]
+   References:
+   - https://github.com/roman/golden-ratio.el
+   #+BEGIN_SRC emacs-lisp
+     (use-package golden-ratio
+       :defer t
+       :config
+       (golden-ratio-mode 1))
+   #+END_SRC
 * Cleanup
   :PROPERTIES:
   :header-args: :tangle init.el
