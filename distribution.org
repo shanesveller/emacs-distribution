@@ -623,6 +623,15 @@ References:
        :config
        (elfeed-org))
    #+END_SRC
+** TODO restart-emacs
+   [2019-03-07 Thu 13:55]
+   References:
+   - https://github.com/iqbalansari/restart-emacs
+   #+BEGIN_SRC emacs-lisp
+     (use-package restart-emacs
+       :if (string= "~/.emacs.d/" user-emacs-directory)
+       :commands 'restart-emacs)
+   #+END_SRC
 * Languages
   :PROPERTIES:
   :header-args: :tangle init.el
