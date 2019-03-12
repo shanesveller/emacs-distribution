@@ -677,7 +677,7 @@ References:
    - https://github.com/trevoke/lsp-elixir
    #+BEGIN_SRC emacs-lisp
      (use-package lsp-elixir
-       :after (lsp-mode)
+       :defer t
        :straight (:type git :host github :repo "trevoke/lsp-elixir")
        :hook (elixir-mode . lsp)
        :config (when-let (elixir-ls-path (getenv "ELIXIR_LS_PATH"))
