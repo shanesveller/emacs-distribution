@@ -1048,6 +1048,23 @@ References:
   :PROPERTIES:
   :header-args: :tangle no
   :END:
+** TODO elixir-reformatter
+   [2019-03-11 Mon 17:04]
+   References:
+   - https://github.com/purcell/reformatter.el/
+   #+BEGIN_SRC emacs-lisp
+     (use-package reformatter
+       :defer t
+       :init
+       (progn
+         (require 'f)
+         (defconst my/elixir-mix-program
+           (f-expand "~/.asdf/shims/mix")))
+       :config
+       (reformatter-define my/elixir-format
+                           :program my/elixir-mix-program
+                           :args '("format")))
+   #+END_SRC
 ** TODO exec-path-from-shell
    [2019-02-10 Sun 15:21]
    References:
