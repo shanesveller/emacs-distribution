@@ -180,9 +180,10 @@ References:
    #+END_SRC
 ** Window Management
 *** Winner Mode
-    #+BEGIN_SRC emacs-lisp
-      (winner-mode 1)
-    #+END_SRC
+#+BEGIN_SRC emacs-lisp
+  (when (fboundp 'winner-mode)
+    (winner-mode 1))
+#+END_SRC
 ** TODO undo-tree
    [2019-02-10 Sun 11:30]
    References:
