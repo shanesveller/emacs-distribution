@@ -790,7 +790,7 @@ References:
    #+BEGIN_SRC emacs-lisp
      (use-package lsp-elixir
        :defer t
-       :straight (:type git :host github :repo "trevoke/lsp-elixir")
+       :straight (:type git :host github :repo "elixir-lsp/lsp-elixir.el")
        :hook (elixir-mode . lsp)
        :config (when-let (elixir-ls-path (getenv "ELIXIR_LS_PATH"))
                  (add-to-list 'exec-path elixir-ls-path)))
