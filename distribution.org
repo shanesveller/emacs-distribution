@@ -888,7 +888,7 @@ References:
        :defer t
        :commands 'web-mode)
    #+END_SRC
-** TODO Nix
+** TODO Nix                                                            :nix:
 *** TODO nix-mode
    [2019-01-02 Wed 17:06]
    References:
@@ -897,6 +897,15 @@ References:
      (use-package nix-mode
        :defer t
        :mode "\\.nix$\\'")
+   #+END_SRC
+*** TODO nix-update
+   [2019-03-15 Fri 19:45]
+   References:
+   - https://github.com/jwiegley/nix-update-el
+   #+BEGIN_SRC emacs-lisp
+     (use-package nix-update
+       :defer t
+       :after 'nix-mode)
    #+END_SRC
 ** TODO graphviz
    [2019-02-10 Sun 13:24]
