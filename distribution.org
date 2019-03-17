@@ -781,6 +781,7 @@ References:
    - https://alchemist.readthedocs.io/en/latest/configuration/
    #+BEGIN_SRC emacs-lisp
      (use-package alchemist
+       :disabled t
        :defer t)
    #+END_SRC
 *** TODO lsp-elixir
