@@ -792,8 +792,10 @@ References:
        :defer t
        :straight (:type git :host github :repo "elixir-lsp/lsp-elixir.el")
        :hook (elixir-mode . lsp)
-       :config (when-let (elixir-ls-path (getenv "ELIXIR_LS_PATH"))
-                 (add-to-list 'exec-path elixir-ls-path)))
+       :config
+       (if-let (elixir-ls-path (getenv "ELIXIR_LS_PATH"))
+           (add-to-list 'exec-path elixir-ls-path)
+         (add-to-list 'exec-path (f-expand "~/src/not_me/elixir-ls/release"))))
    #+END_SRC
 *** TODO flycheck-mix
    [2019-02-08 Fri 19:16]
