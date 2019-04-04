@@ -717,6 +717,14 @@ References:
        (setq md4rd-subs-active
              '(emacs evilmode lisp orgmode planetemacs spacemacs)))
    #+END_SRC
+** TODO helpful                                                       :docs:
+   [2019-03-27 Wed 11:51]
+   References:
+   - https://github.com/Wilfred/helpful
+   #+BEGIN_SRC emacs-lisp
+     (use-package helpful
+       :bind (("C-h F" . helpful-function)))
+   #+END_SRC
 * Languages
   :PROPERTIES:
   :header-args: :tangle init.el
