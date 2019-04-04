@@ -37,6 +37,7 @@ References:
 - http://pages.sachachua.com/.emacs.d/Sacha.html
 - https://github.com/jwiegley/dot-emacs
 - https://github.com/purcell/emacs.d
+- https://github.com/Fuco1/.emacs.d
 *** User Configurations
 - https://sriramkswamy.github.io/dotemacs/
 *** Blog Posts
