@@ -1,6 +1,7 @@
 *.elc
 .lsp-session-v*
 /forge-database.sqlite
+/recentf
 bookmarks
 hackernews
 init.el
