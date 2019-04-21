@@ -1,7 +1,8 @@
 *.elc
 .lsp-session-v*
+/forge-database.sqlite
 bookmarks
-init.el
 hackernews
+init.el
 projectile-bookmarks.eld
 request
