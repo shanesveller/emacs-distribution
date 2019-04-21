@@ -2,6 +2,7 @@
 .lsp-session-v*
 /forge-database.sqlite
 /recentf
+/transient/values.el
 bookmarks
 hackernews
 init.el
