@@ -1094,3 +1094,19 @@ References:
        :defer t
        :commands 'reformatter)
    #+END_SRC
+** TODO org-rifle
+   [2019-08-11 Sun 09:42]
+   References:
+   - https://github.com/alphapapa/org-rifle
+   - https://www.reddit.com/r/orgmode/comments/co6jy7/ann_helmorgrifle_170/
+   #+BEGIN_SRC emacs-lisp
+     ;; (require 'quelpa-use-package)
+     ;; (use-package org-rifle
+     ;;   :quelpa (org-rifle :fetcher github
+     ;;                      :repo "alphapapa/org-rifle"
+     ;;                      :branch "wip/org-rifle"))
+     ;; (use-package helm-org-rifle
+     ;;   :quelpa (helm-org-rifle :fetcher github
+     ;;                           :repo "alphapapa/org-rifle"
+     ;;                           :branch "wip/org-rifle"))
+   #+END_SRC
