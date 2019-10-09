@@ -215,6 +215,13 @@ References:
    :PROPERTIES:
    :header-args: :tangle init.el
    :END:
+** TODO cus-edit
+References:
+- https://github.com/alphapapa/unpackaged.el/tree/746801a677ada6cd6fa076e423aa0953779f3fad#set-value-of-customization-option-at-point
+- https://github.com/raxod502/straight.el/tree/388bf37f30f0934c8ef1b52edfd65875e945da21#the-recipe-format
+ #+begin_src emacs-lisp
+   (straight-use-package '(cus-edit :type built-in))
+ #+end_src
 ** TODO Evil-Mode
    References:
    - https://github.com/emacs-evil/evil
