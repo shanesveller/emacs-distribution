@@ -1110,3 +1110,12 @@ References:
      ;;                           :repo "alphapapa/org-rifle"
      ;;                           :branch "wip/org-rifle"))
    #+END_SRC
+** TODO emacs-direnv
+   [2019-08-31 Sat 22:38]
+   References:
+   - https://github.com/wbolster/emacs-direnv
+   #+BEGIN_SRC emacs-lisp
+     (use-package direnv
+       :config
+       (direnv-mode))
+   #+END_SRC
